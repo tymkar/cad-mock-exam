@@ -6,9 +6,11 @@ const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const setsElement = document.getElementById("sets");
 const questionSetContainer = document.getElementById("question-set-container");
+const questionSetPreview = document.getElementById("preview-container");
 
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
 
+previewButton.addEventListener("click", showPreview);
 startButton.addEventListener("click", startExam);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -145,6 +147,7 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove("hide");
     } else {
+      //go back button will be here
     }
   }
 }
@@ -162,6 +165,22 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
+}
+
+//question set preview
+
+function showPreview() {
+  // previewButton.classList.add("hide");
+
+  questionSetPreview.classList.remove("hide");
+  questionSetContainer.classList.add("hide");
+
+  pickedQuestionSet.forEach((question) => {
+    const questionDiv = document.createElement("div");
+    questionSetPreview.appendChild(questionDiv);
+
+    questionDiv.innerText = question.question;
+  });
 }
 
 //Question Sets (1-9)

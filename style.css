@@ -17,15 +17,16 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: hsl(var(--hue), 100%, 20%);
+  overflow-x: hidden;
 }
 
 .container {
+  margin-top: 5%;
   width: 800px;
   max-width: 80%;
   background-color: whitesmoke;
