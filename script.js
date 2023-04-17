@@ -1,3 +1,4 @@
+const previewButton = document.getElementById("preview-button");
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
 const questionContainerElement = document.getElementById("question-container");
@@ -57,9 +58,8 @@ function setQuestionSet(e) {
     pickedQuestionSet = questionSet9;
   }
 
+  previewButton.classList.remove("hide");
   startButton.classList.remove("hide");
-
-  console.log(pickedQuestionSet);
 }
 
 function startExam() {
@@ -114,9 +114,6 @@ function selectAnswer(e) {
 
   selectedButton.classList.add("selected-answer");
 
-  console.log(shuffledQuestions[currentQuestionIndex].question_type);
-  console.log(selectedAnswersCount);
-
   if (
     shuffledQuestions[currentQuestionIndex].question_type === "single-choice"
   ) {
@@ -144,13 +141,10 @@ function selectAnswer(e) {
     }
   }
 
-  console.log(selectedAnswersCount);
   if (showNextButton) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove("hide");
     } else {
-      startButton.innerText = "restart";
-      startButton.classList.remove("hide");
     }
   }
 }
