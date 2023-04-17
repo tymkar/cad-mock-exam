@@ -1,4 +1,5 @@
 const previewButton = document.getElementById("preview-button");
+const goBackButton = document.getElementById("go-back-button");
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
 const questionContainerElement = document.getElementById("question-container");
@@ -8,14 +9,19 @@ const setsElement = document.getElementById("sets");
 const questionSetContainer = document.getElementById("question-set-container");
 const questionSetPreview = document.getElementById("preview-container");
 
+//button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
 
 previewButton.addEventListener("click", showPreview);
+
 startButton.addEventListener("click", startExam);
+
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
+
+goBackButton.addEventListener("click", showQuestionSets);
 
 for (let i = 0; i < Array.from(setsElement.children).length; i++) {
   const questionSetButton = Array.from(setsElement.children)[i];
@@ -168,9 +174,9 @@ function clearStatusClass(element) {
 }
 
 //question set preview
-
 function showPreview() {
-  // previewButton.classList.add("hide");
+  previewButton.classList.add("hide");
+  goBackButton.classList.remove("hide");
 
   questionSetPreview.classList.remove("hide");
   questionSetContainer.classList.add("hide");
@@ -181,6 +187,14 @@ function showPreview() {
 
     questionDiv.innerText = question.question;
   });
+}
+
+//go back to question sets
+function showQuestionSets() {
+  questionSetContainer.classList.remove("hide");
+  goBackButton.classList.add("hide");
+  previewButton.classList.remove("hide");
+  questionSetPreview.classList.add("hide");
 }
 
 //Question Sets (1-9)

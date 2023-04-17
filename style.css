@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  margin-top: 5%;
+  margin-top: 8rem;
   width: 800px;
   max-width: 80%;
   background-color: whitesmoke;
@@ -66,6 +66,7 @@ body {
 }
 
 .start-button,
+.go-back-button,
 .preview-button,
 .next-button {
   font-size: 1.5 rem;
