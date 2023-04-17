@@ -2,6 +2,7 @@ const previewButton = document.getElementById("preview-button");
 const goBackButton = document.getElementById("go-back-button");
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
+const finishButton = document.getElementById("finish-button");
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
@@ -22,6 +23,8 @@ nextButton.addEventListener("click", () => {
 });
 
 goBackButton.addEventListener("click", showQuestionSets);
+
+finishButton.addEventListener("click", showQuestionSets);
 
 for (let i = 0; i < Array.from(setsElement.children).length; i++) {
   const questionSetButton = Array.from(setsElement.children)[i];
@@ -71,6 +74,7 @@ function setQuestionSet(e) {
 }
 
 function startExam() {
+  previewButton.classList.add("hide");
   startButton.classList.add("hide");
   shuffledQuestions = pickedQuestionSet.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
@@ -153,7 +157,7 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
       nextButton.classList.remove("hide");
     } else {
-      //go back button will be here
+      finishButton.classList.remove("hide");
     }
   }
 }
@@ -175,7 +179,12 @@ function clearStatusClass(element) {
 
 //question set preview
 function showPreview() {
+  while (questionSetPreview.firstChild) {
+    questionSetPreview.removeChild(questionSetPreview.firstChild);
+  }
+
   previewButton.classList.add("hide");
+  startButton.classList.add("hide");
   goBackButton.classList.remove("hide");
 
   questionSetPreview.classList.remove("hide");
@@ -190,11 +199,17 @@ function showPreview() {
 }
 
 //go back to question sets
-function showQuestionSets() {
+function showQuestionSets(e) {
+  if (e.target === goBackButton) {
+    goBackButton.classList.add("hide");
+    previewButton.classList.remove("hide");
+    questionSetPreview.classList.add("hide");
+  }
+  if (e.target === finishButton) {
+    finishButton.classList.add("hide");
+  }
+  startButton.classList.remove("hide");
   questionSetContainer.classList.remove("hide");
-  goBackButton.classList.add("hide");
-  previewButton.classList.remove("hide");
-  questionSetPreview.classList.add("hide");
 }
 
 //Question Sets (1-9)
