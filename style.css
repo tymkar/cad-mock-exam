@@ -54,7 +54,8 @@ body {
 }
 
 .button:hover {
-  border-color: black;
+  /* box-shadow: 0 0 10px 2px; */
+  border: 4px solid black;
 }
 
 .button.correct {
@@ -81,10 +82,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.selected-answer {
-  border: 4px solid black;
 }
 
 .question-set-container {
@@ -154,11 +151,36 @@ body {
   border-radius: 5px;
   outline: none;
   border: 4px solid transparent;
-  background-color: #00aaff;
+  background-color: #74b6d7;
 }
 
 .set-choice-button:hover {
   border: 4px solid black;
+  /* box-shadow: 0 0 10px 2px; */
+}
+
+.selected-answer {
+  border: 4px solid black;
+  /* box-shadow: 0 0 10px 2px; */
+}
+
+.previewed-question {
+  margin: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #004466;
+}
+
+.previewed-answer {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.previewed-correct-answer::before {
+  content: "✅";
+}
+
+.previewed-wrong-answer::before {
+  content: "❌";
 }
 
 .preview-view {

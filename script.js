@@ -192,15 +192,23 @@ function showPreview() {
   questionSetContainer.classList.add("hide");
   containerElement.classList.add("preview-view");
 
-  pickedQuestionSet.forEach((question) => {
+  pickedQuestionSet.forEach((question, questionNumber) => {
     const questionDiv = document.createElement("div");
     questionSetPreview.appendChild(questionDiv);
-    questionDiv.innerText = question.question;
+    questionDiv.innerText = questionNumber + 1 + ") " + question.question;
+    questionDiv.setAttribute("class", "previewed-question");
 
     question.answers.forEach((answer) => {
       const asnwerDiv = document.createElement("div");
       questionDiv.appendChild(asnwerDiv);
-      asnwerDiv.innerText = answer.text;
+      asnwerDiv.innerHTML = answer.text;
+      asnwerDiv.setAttribute("class", "previewed-answer");
+
+      if (answer.correct === true) {
+        asnwerDiv.classList.add("previewed-correct-answer");
+      } else {
+        asnwerDiv.classList.add("previewed-wrong-answer");
+      }
     });
   });
 }
