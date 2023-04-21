@@ -46,7 +46,7 @@ body {
 
 .button {
   --hue: var(--hue-neutral);
-  border: 3px solid hsl(var(--hue), 100%, 30%);
+  border: 4px solid transparent;
   background-color: hsl(var(--hue), 100%, 50%);
   border-radius: 5px;
   padding: 5px 10px;
@@ -153,10 +153,16 @@ body {
   height: 40px;
   border-radius: 5px;
   outline: none;
+  border: 4px solid transparent;
+  background-color: #00aaff;
 }
 
 .set-choice-button:hover {
   border: 4px solid black;
+}
+
+.preview-view {
+  margin-top: 0;
 }
 
 .hide {

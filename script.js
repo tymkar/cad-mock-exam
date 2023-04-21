@@ -9,6 +9,7 @@ const answerButtonsElement = document.getElementById("answer-buttons");
 const setsElement = document.getElementById("sets");
 const questionSetContainer = document.getElementById("question-set-container");
 const questionSetPreview = document.getElementById("preview-container");
+const containerElement = document.getElementById("container");
 
 //button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
@@ -189,12 +190,18 @@ function showPreview() {
 
   questionSetPreview.classList.remove("hide");
   questionSetContainer.classList.add("hide");
+  containerElement.classList.add("preview-view");
 
   pickedQuestionSet.forEach((question) => {
     const questionDiv = document.createElement("div");
     questionSetPreview.appendChild(questionDiv);
-
     questionDiv.innerText = question.question;
+
+    question.answers.forEach((answer) => {
+      const asnwerDiv = document.createElement("div");
+      questionDiv.appendChild(asnwerDiv);
+      asnwerDiv.innerText = answer.text;
+    });
   });
 }
 
@@ -204,12 +211,15 @@ function showQuestionSets(e) {
     goBackButton.classList.add("hide");
     previewButton.classList.remove("hide");
     questionSetPreview.classList.add("hide");
+    startButton.classList.remove("hide");
   }
   if (e.target === finishButton) {
     finishButton.classList.add("hide");
+    questionContainerElement.classList.add("hide");
+    selectedSetButton.classList.remove("selected-answer");
   }
-  startButton.classList.remove("hide");
   questionSetContainer.classList.remove("hide");
+  containerElement.classList.remove("preview-view");
 }
 
 //Question Sets (1-9)
@@ -217,7 +227,7 @@ function showQuestionSets(e) {
 const questionSet1 = [
   {
     question_type: "single-choice",
-    question: "ccc",
+    question: "set 1",
     answers: [
       { text: "apple", correct: true },
       { text: "potato", correct: false },
@@ -236,7 +246,7 @@ const questionSet1 = [
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question: "set 1",
     answers: [
       { text: "potato", correct: true },
       { text: "potato", correct: false },
@@ -248,7 +258,7 @@ const questionSet1 = [
 const questionSet2 = [
   {
     question_type: "single-choice",
-    question: "pick pick pick a fruit",
+    question: "set 2 pick pick pick a fruit",
     answers: [
       { text: "apple", correct: true },
       { text: "potato", correct: false },
@@ -257,7 +267,7 @@ const questionSet2 = [
   },
   {
     question_type: "single-choice",
-    question: "pick a fruitty",
+    question: " set 2pick a fruitty",
     answers: [
       { text: "appppple", correct: true },
       { text: "poppptato", correct: false },
@@ -266,7 +276,7 @@ const questionSet2 = [
   },
   {
     question_type: "single-choice",
-    question: "pick a potato",
+    question: " set2 pick a potato",
     answers: [
       { text: "potato", correct: true },
       { text: "potato", correct: false },
@@ -278,7 +288,7 @@ const questionSet2 = [
 const questionSet3 = [
   {
     question_type: "single-choice",
-    question: "ccc",
+    question: "set 3 ccc",
     answers: [
       { text: "apple", correct: true },
       { text: "potato", correct: false },
@@ -287,7 +297,7 @@ const questionSet3 = [
   },
   {
     question_type: "single-choice",
-    question: "bbb",
+    question: " set 3 bbb",
     answers: [
       { text: "appppple", correct: true },
       { text: "poppptato", correct: false },
@@ -296,7 +306,7 @@ const questionSet3 = [
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question: "set 3 aaa",
     answers: [
       { text: "potato", correct: true },
       { text: "potato", correct: false },
