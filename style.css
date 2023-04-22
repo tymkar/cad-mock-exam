@@ -35,6 +35,11 @@ body {
   box-shadow: 0 0 10px 2px;
 }
 
+.question {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .answer-buttons-container {
   display: flex;
   flex-direction: column;
@@ -43,6 +48,10 @@ body {
 .answer-button {
   margin: 5px;
 }
+
+/* .progress-bar {
+  margin-left: auto;
+} */
 
 .button {
   --hue: var(--hue-neutral);

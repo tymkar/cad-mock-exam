@@ -87,11 +87,11 @@ function startExam() {
 
 function setNextQuestion() {
   resetState();
-  showQuestion(shuffledQuestions[currentQuestionIndex]);
+  showQuestion(shuffledQuestions[currentQuestionIndex], currentQuestionIndex);
 }
 
-function showQuestion(question) {
-  questionElement.innerText = question.question;
+function showQuestion(question, questionNumber) {
+  questionElement.innerText = questionNumber + 1 + ") " + question.question;
 
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
