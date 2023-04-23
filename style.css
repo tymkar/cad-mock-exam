@@ -60,9 +60,10 @@ body {
 
 .progress-bar-inner {
   height: 100%;
-  width: 90%;
   border-radius: 7px;
   background-color: lightseagreen;
+
+  transition: all 0.5s linear;
 }
 
 .button {
@@ -95,6 +96,12 @@ body {
   font-weight: bolder;
   width: 6rem;
   margin: 0 10px;
+}
+
+.button:active,
+.set-choice-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 12px -2px inset rgba(50, 50, 50, 0.25);
 }
 
 .controls {

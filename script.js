@@ -10,6 +10,7 @@ const setsElement = document.getElementById("sets");
 const questionSetContainer = document.getElementById("question-set-container");
 const questionSetPreview = document.getElementById("preview-container");
 const containerElement = document.getElementById("container");
+const progressBar = document.getElementById("progress-bar-inner");
 
 //button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
@@ -74,7 +75,12 @@ function setQuestionSet(e) {
   startButton.classList.remove("hide");
 }
 
+let progressBarWidth;
+
 function startExam() {
+  // progressBarWidth = (1 / pickedQuestionSet.length) * 100 + "%";
+  // progressBar.style.width = progressBarWidth;
+
   previewButton.classList.add("hide");
   startButton.classList.add("hide");
   shuffledQuestions = pickedQuestionSet.sort(() => Math.random() - 0.5);
@@ -91,6 +97,9 @@ function setNextQuestion() {
 }
 
 function showQuestion(question, questionNumber) {
+  progressBarWidth = (questionNumber / pickedQuestionSet.length) * 100 + "%";
+  progressBar.style.width = progressBarWidth;
+
   questionElement.innerText = questionNumber + 1 + ") " + question.question;
 
   question.answers.forEach((answer) => {
