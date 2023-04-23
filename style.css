@@ -215,3 +215,25 @@ body {
 .hide {
   display: none;
 }
+
+.celebrate {
+  background-color: #fa8072;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25em;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  padding: 1em 2em;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
