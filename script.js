@@ -55,9 +55,7 @@ function playCelebrationSound() {
   }
 }
 
-function endMockExam() {
-  confetti.stop();
-}
+function endMockExam() {}
 
 let score = 0;
 
