@@ -37,7 +37,7 @@ body {
 
 .question {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .answer-buttons-container {
@@ -49,9 +49,21 @@ body {
   margin: 5px;
 }
 
-/* .progress-bar-outer {
+.progress-bar-outer {
   margin-left: auto;
-} */
+  margin-bottom: 20px;
+  height: 0.75rem;
+  width: 25%;
+  border-radius: 7px;
+  background-color: lightgray;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  width: 90%;
+  border-radius: 7px;
+  background-color: lightseagreen;
+}
 
 .button {
   --hue: var(--hue-neutral);
@@ -63,7 +75,6 @@ body {
 }
 
 .button:hover {
-  /* box-shadow: 0 0 10px 2px; */
   border: 4px solid black;
 }
 
@@ -165,12 +176,10 @@ body {
 
 .set-choice-button:hover {
   border: 4px solid black;
-  /* box-shadow: 0 0 10px 2px; */
 }
 
 .selected-answer {
   border: 4px solid black;
-  /* box-shadow: 0 0 10px 2px; */
 }
 
 .previewed-question {
