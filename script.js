@@ -61,7 +61,6 @@ function playCelebrationSound() {
 
 function endMockExam() {
   score = 0;
-  console.log(score);
   questionContainerElement.classList.add("hide");
   questionSetContainer.classList.remove("hide");
   scoreboard.classList.add("hide");
@@ -226,8 +225,6 @@ function selectAnswer(e) {
       finishButton.classList.remove("hide");
     }
   }
-
-  console.log(score);
 }
 
 function setStatusClass(element, correct) {
