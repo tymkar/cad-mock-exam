@@ -14,6 +14,7 @@ const containerElement = document.getElementById("container");
 const progressBar = document.getElementById("progress-bar-inner");
 const celebrationSound = document.getElementById("celebraion-sound");
 const scoreboard = document.getElementById("scoreboard");
+const userScore = document.getElementById("score");
 
 //button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
@@ -46,6 +47,8 @@ function showScoreboard() {
   questionContainerElement.classList.add("hide");
   selectedSetButton.classList.remove("selected-answer");
   homeButton.classList.remove("hide");
+
+  userScore.innerText = score;
 }
 
 function playCelebrationSound() {
@@ -55,7 +58,14 @@ function playCelebrationSound() {
   }
 }
 
-function endMockExam() {}
+function endMockExam() {
+  score = 0;
+  console.log(score);
+  questionContainerElement.classList.add("hide");
+  questionSetContainer.classList.remove("hide");
+  scoreboard.classList.add("hide");
+  homeButton.classList.add("hide");
+}
 
 let score = 0;
 
@@ -159,7 +169,7 @@ function resetState() {
 }
 
 let selectedAnswersCount = 0;
-let multipleChoiceCount = 0;
+let multipleChoiceCorrectCount = 0;
 
 function selectAnswer(e) {
   const selectedButton = e.target;
@@ -183,7 +193,7 @@ function selectAnswer(e) {
     }
   } else {
     if (correct) {
-      multipleChoiceCount++;
+      multipleChoiceCorrectCount++;
     }
 
     selectedAnswersCount++;
@@ -199,12 +209,12 @@ function selectAnswer(e) {
       });
 
       if (
-        multipleChoiceCount ===
+        multipleChoiceCorrectCount ===
         shuffledQuestions[currentQuestionIndex].number_of_correct_answers
       ) {
         score++;
       }
-      multipleChoiceCount = 0;
+      multipleChoiceCorrectCount = 0;
 
       showNextButton = true;
       selectedAnswersCount = 0;
@@ -286,7 +296,7 @@ function showQuestionSets() {
 const start = () => {
   setTimeout(function () {
     confetti.start();
-  }, 1000);
+  }, 500);
 };
 
 var confetti = {
