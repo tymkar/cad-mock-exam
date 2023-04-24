@@ -48,7 +48,8 @@ function showScoreboard() {
   selectedSetButton.classList.remove("selected-answer");
   homeButton.classList.remove("hide");
 
-  userScore.innerText = score;
+  userScore.innerText =
+    Math.round((score / pickedQuestionSet.length) * 100) + " %";
 }
 
 function playCelebrationSound() {
@@ -119,9 +120,6 @@ function setQuestionSet(e) {
 let progressBarWidth;
 
 function startExam() {
-  // progressBarWidth = (1 / pickedQuestionSet.length) * 100 + "%";
-  // progressBar.style.width = progressBarWidth;
-
   previewButton.classList.add("hide");
   startButton.classList.add("hide");
   shuffledQuestions = pickedQuestionSet.sort(() => Math.random() - 0.5);

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"); */
 
 *,
 *::before,
@@ -24,6 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(var(--hue), 100%, 20%);
+  background-image: url("flower-background.jpg");
   overflow-x: hidden;
 }
 
@@ -215,7 +216,23 @@ body {
 }
 
 .scoreboard {
-  font-family: "Permanent Marker", cursive;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-title {
+  font-family: "Delicious Handrawn", cursive;
+  font-size: 8rem;
+  /* margin: auto; */
+}
+
+.score {
+  font-family: "Delicious Handrawn", cursive;
+  font-size: 10rem;
+  /* margin: auto; */
 }
 
 .hide {
