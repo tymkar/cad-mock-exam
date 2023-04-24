@@ -126,6 +126,7 @@ body {
   font-size: 1.5rem;
   margin-top: 15px;
   margin-bottom: 30px;
+  color: #1c2246;
 }
 
 .sets {
@@ -182,7 +183,8 @@ body {
   border-radius: 5px;
   outline: none;
   border: 4px solid transparent;
-  background-color: #74b6d7;
+  background-color: #a3bec5;
+  color: #1c2246;
 }
 
 .set-choice-button:hover {
@@ -227,13 +229,13 @@ body {
 .score-title {
   font-family: "Delicious Handrawn", cursive;
   font-size: 8rem;
-  /* margin: auto; */
+  color: #dbaa1d;
 }
 
 .score {
   font-family: "Delicious Handrawn", cursive;
   font-size: 10rem;
-  /* margin: auto; */
+  color: #dbaa1d;
 }
 
 .hide {
