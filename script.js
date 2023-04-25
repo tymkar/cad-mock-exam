@@ -794,4 +794,40 @@ const questionSet9 = [
       { text: "deer", correct: false },
     ],
   },
+  {
+    question_type: "single-choice",
+    question: "bbb",
+    answers: [
+      { text: "appppple", correct: true },
+      { text: "poppptato", correct: false },
+      { text: "deepppr", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "aaa",
+    answers: [
+      { text: "potato", correct: true },
+      { text: "potato", correct: false },
+      { text: "deer", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "bbb",
+    answers: [
+      { text: "appppple", correct: true },
+      { text: "poppptato", correct: false },
+      { text: "deepppr", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "aaa",
+    answers: [
+      { text: "potato", correct: true },
+      { text: "potato", correct: false },
+      { text: "deer", correct: false },
+    ],
+  },
 ];
