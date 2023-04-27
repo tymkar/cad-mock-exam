@@ -12,7 +12,6 @@ const questionSetContainer = document.getElementById("question-set-container");
 const questionSetPreview = document.getElementById("preview-container");
 const containerElement = document.getElementById("container");
 const progressBar = document.getElementById("progress-bar-inner");
-const celebrationSound = document.getElementById("celebraion-sound");
 const scoreboard = document.getElementById("scoreboard");
 const userScore = document.getElementById("score");
 
@@ -36,7 +35,6 @@ finishButton.addEventListener("click", showScoreboard);
 function showScoreboard() {
   //start confetti
   confetti.start();
-  playCelebrationSound();
 
   setTimeout(function () {
     confetti.stop();
@@ -50,13 +48,6 @@ function showScoreboard() {
 
   userScore.innerText =
     Math.round((score / pickedQuestionSet.length) * 100) + " %";
-}
-
-function playCelebrationSound() {
-  if (celebrationSound) {
-    celebrationSound.currentTime = 0;
-    celebrationSound.play();
-  }
 }
 
 function endMockExam() {
@@ -771,7 +762,8 @@ const questionSet1 = [
   },
   {
     question_type: "single-choice",
-    question: `What is the output of below code snippet? 
+    question: `What is the output of below code snippet?
+
     var count = new GlideAggregate('incident'); 
         count.addAggregate('MIN','sys_mod_count'); 
         count.addAggregate('MAX','sys_mod_count'); 

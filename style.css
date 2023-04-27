@@ -43,13 +43,13 @@ body {
   margin-bottom: 20px;
   height: 0.75rem;
   width: 25%;
-  border-radius: 7px;
+  border-radius: 3px;
   background-color: lightgray;
 }
 
 .progress-bar-inner {
   height: 100%;
-  border-radius: 7px;
+  border-radius: 3px;
   background-color: lightseagreen;
 
   transition: all 0.3s linear;
