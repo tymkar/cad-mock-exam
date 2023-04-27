@@ -6,6 +6,20 @@
   font-weight: bold;
 }
 
+::-webkit-scrollbar-track {
+  background-color: #235f97;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #53ad42;
+}
+
 body {
   background-color: #235390;
   padding: 0;
@@ -19,7 +33,7 @@ body {
 }
 
 .container {
-  margin-top: 8rem;
+  margin-top: 25vh;
   width: 800px;
   max-width: 80%;
   background-color: #bbf3f6;
@@ -43,14 +57,14 @@ body {
   margin-bottom: 20px;
   height: 0.75rem;
   width: 25%;
-  border-radius: 3px;
-  background-color: lightgray;
+  border-radius: 4px;
+  background-color: #91a9c8;
 }
 
 .progress-bar-inner {
   height: 100%;
-  border-radius: 3px;
-  background-color: lightseagreen;
+  border-radius: 4px;
+  background-color: #235390;
 
   transition: all 0.3s linear;
 }
@@ -221,13 +235,13 @@ body {
 .score-title {
   font-family: "Delicious Handrawn", cursive;
   font-size: 8rem;
-  color: #dbaa1d;
+  color: #58cc02;
 }
 
 .score {
   font-family: "Delicious Handrawn", cursive;
   font-size: 10rem;
-  color: #dbaa1d;
+  color: #58cc02;
 }
 
 .hide {
