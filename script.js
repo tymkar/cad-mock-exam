@@ -1700,6 +1700,28 @@ const questionSet7 = [
       { text: "deer", correct: false },
     ],
   },
+  {
+    question_type: "single-choice",
+    question: "",
+    answers: [
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question: "",
+    answers: [
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+    ],
+  },
 ];
 
 const questionSet8 = [
@@ -2031,7 +2053,7 @@ const questionSet8 = [
     question_type: "multiple-choice",
     number_of_correct_answers: 2,
     question:
-      "Which items can be configured with multiple roles to grant access?",
+      "Which items can be configured with multiple roles to grant access? [pick two]",
     answers: [
       { text: "Application", correct: false },
       { text: "Application Menu", correct: true },
@@ -2042,34 +2064,515 @@ const questionSet8 = [
   },
   {
     question_type: "single-choice",
-    question: "",
+    question:
+      "Which of the following methods creates the response body in the resource script?",
     answers: [
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
+      { text: "setBody()", correct: true },
+      { text: "setContent()", correct: false },
+      { text: "setBodyContent()", correct: false },
+      { text: "getBody()", correct: false },
+      { text: "getContent()", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: "",
+    question: "How do you use data from one step in a test in a later step?",
     answers: [
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
+      {
+        text: "Write a script to open the test step object to get the data to use in the later step.",
+        correct: false,
+      },
+      {
+        text: "Click the step in the Data Panel and select the data to use in the later step.",
+        correct: false,
+      },
+      {
+        text: "Create variables on the test and write scripts to populate the variables when the test executes.",
+        correct: false,
+      },
+      {
+        text: "Click the Reference button and select the record from the table.",
+        correct: false,
+      },
+      {
+        text: "Click the Data Pill Picker button and select the variable from the data pill picker.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following modules enables security rule debugging?",
+    answers: [
+      {
+        text: "System Diagnostics > Debugging > Debug Security Rules",
+        correct: false,
+      },
+      {
+        text: "System Diagnostics > Session Debug > Debug Security Rules",
+        correct: false,
+      },
+      {
+        text: "System Security > Session Debug > Debug Security Rules",
+        correct: false,
+      },
+      {
+        text: "O System Security > Debugging > Debug Security Rules",
+        correct: true,
+      },
+      {
+        text: "Access Control > Debugging > Debug Security Rule",
+        correct: false,
+      },
     ],
   },
   {
     question_type: "multiple-choice",
     number_of_correct_answers: 2,
-    question: "",
+    question:
+      "Which of the following are possible outcomes when coalescing detects a match between a record in the staging table and a record in the target table? [pick two]",
     answers: [
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
-      { text: "", correct: false },
+      {
+        text: "Create duplicate records",
+        correct: false,
+      },
+      {
+        text: "Halt the import and ask the user what to do",
+        correct: false,
+      },
+      {
+        text: "Keep the record already in the target table",
+        correct: true,
+      },
+      {
+        text: "Overwrite the record in the target table with the source data",
+        correct: true,
+      },
+      {
+        text: "Stop the import and delete the previously imported records",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "The system can not detect choice and reference type fields when importing data from a spreadsheet",
+    answers: [
+      {
+        text: "True",
+        correct: true,
+      },
+      {
+        text: "False",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question: "Which features of Analytics Hub send notifications? [pick two]",
+    answers: [
+      {
+        text: "Comments",
+        correct: false,
+      },
+      {
+        text: "Thresholds",
+        correct: true,
+      },
+      {
+        text: "Forecasts",
+        correct: false,
+      },
+      {
+        text: "Targets",
+        correct: true,
+      },
+      {
+        text: "Comparisons",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following are true statements about the ServiceNow Agent mobile application? [pick two]",
+    answers: [
+      {
+        text: "There is no charge to install the ServiceNow Agent mobile application on mobile devices",
+        correct: true,
+      },
+      {
+        text: "When a developer creates a custom application for desktop, a mobile version of the custom application is automatically created",
+        correct: false,
+      },
+      {
+        text: "Business Rules for custom app tables do not apply when records are modified using the ServiceNow Agent mobile application",
+        correct: false,
+      },
+      {
+        text: "If a Mobile view is defined for a custom app table, the ServiceNow Agent mobile application uses the Mobile view to create a List screen",
+        correct: false,
+      },
+      {
+        text: "Developers can create mobile applications for the ServiceNow Agent mobile application without writing any scripts",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Removing a field from a form using the Form Designer deletes the field from the database table. True or False?",
+    answers: [
+      {
+        text: "True",
+        correct: false,
+      },
+      {
+        text: "False",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "REST API Explorer creates code samples for which of the following languages?",
+    answers: [
+      {
+        text: "cURL",
+        correct: false,
+      },
+      {
+        text: "Perl",
+        correct: false,
+      },
+      {
+        text: "Python",
+        correct: false,
+      },
+      {
+        text: "JavaScript",
+        correct: false,
+      },
+      {
+        text: "PowerShell",
+        correct: false,
+      },
+      {
+        text: "All of the above",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "Which of the following are true statements about Record Watch? [pick three]",
+    answers: [
+      {
+        text: "Notifies tables when records are changed by widgets",
+        correct: false,
+      },
+      {
+        text: "The recordWatch() method is part of the spUtil Widget API class",
+        correct: true,
+      },
+      {
+        text: "Is automatically part of a widget's logic",
+        correct: false,
+      },
+      {
+        text: "Registers a listener in a widget",
+        correct: true,
+      },
+      {
+        text: "Notified when table records are inserted, updated, or deleted",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "How do you use data from a subflow in a flow?",
+    answers: [
+      {
+        text: "Write a script to open the subflow object to get the data to use in the flow.",
+        correct: false,
+      },
+      {
+        text: "Create a subflow output and assign the subflow output a value from the Assign subflow output action in the subflow. Subflow outputs are data pills in the flow.",
+        correct: false,
+      },
+      {
+        text: "Create data pills in the Data Panel to use when the subflow is added to a flow.",
+        correct: false,
+      },
+      {
+        text: "Create an action output and use the Assign subflow output flow logic to assign a value to the output. Subflow outputs are data pills in the flow.",
+        correct: true,
+      },
+      {
+        text: "Outputs from all actions in the subflow are automatically available as data pills in the flow.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Marko is a user in the MSP domain in the hierarchy. The MSP domain has the ACME domain configured as a contains domain. Carl needs to work with records in the ACME EMEA domain. Which configuration change should be made to allow Carl to work with ACME EMEA records?",
+    answers: [
+      {
+        text: "Configure the ACME EMEA domain as a contains domain for the MSP domain.",
+        correct: false,
+      },
+      {
+        text: "Configure the MSP domain as a contains domain for the ACME EMEA domain.",
+        correct: false,
+      },
+      {
+        text: "Configure the ACME EMEA domain as a visibility domain for Carl Lucas's user record.",
+        correct: false,
+      },
+      { text: "No change is necessary.", correct: true },
+      {
+        text: "Configure the ACME EMEA domain as a visibility domain for the ACME EMEA Technicians group.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Assume an application scope, sn_my_app, exists. Scripts from other application scopes can never delete records from tables in the sn_my_app scope. True or False?",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following is NOT a type of credential used by REST APIs? [pick two]",
+    answers: [
+      { text: "API Key", correct: false },
+      { text: "Basic Auth", correct: false },
+      { text: "CIM", correct: true },
+      { text: "OAuth 2.0", correct: false },
+      { text: "JDBC", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Test Management can integrate with PPM",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "gs.getProperty() method is used to retrieve Application Property values in a script?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following best describes the Client Script global function this.server.update()?",
+    answers: [
+      {
+        text: "Calls the server and posts this.data to the Server Script",
+        correct: true,
+      },
+      {
+        text: "Calls the server and automatically replaces the current options and data from the server response",
+        correct: false,
+      },
+      {
+        text: "Retrieves the options used to invoke the widget on the server",
+        correct: false,
+      },
+      {
+        text: "Calls the Server Script and passes custom input",
+        correct: false,
+      },
+      {
+        text: "Retrieves the serialized data object from the Server Script",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "Which of the following statements is true for the Form Designer?",
+    answers: [
+      {
+        text: "To add a field to the form layout, drag the field from the Fields tab to the desired destination on the form.",
+        correct: true,
+      },
+      {
+        text: "To create a new field on a form's table, drag the appropriate data type from the Field Types tab to the form and then configure the new field.",
+        correct: true,
+      },
+      {
+        text: "To remove a field from the form layout, hover over the field to enable the Action buttons, and select the Delete (X) button.",
+        correct: true,
+      },
+      {
+        text: "To add a section to the form layout, drag it from the Field Types tab to the desired destination on the form.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What happens if no Embedded Help is available for a page?",
+    answers: [
+      { text: "A default Embedded Help page is displayed.", correct: true },
+      { text: "The Toggle Help Sidebar button is grayed out.", correct: false },
+      { text: "The No Help Available dialog appears.", correct: false },
+      { text: "The requestor is redirected to the", correct: false },
+      { text: "ServiceNow docs site.", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "Which of the following should you do before importing data into ServiceNow? [pick three]",
+    answers: [
+      { text: "Understand the data you plan to import", correct: true },
+      { text: "Play fetch with your dog :)", correct: false },
+      {
+        text: "Decide what to do with incomplete or erroneous data",
+        correct: true,
+      },
+      {
+        text: "Determine which source data maps to which target fields",
+        correct: true,
+      },
+      {
+        text: "Delete all the existing target table records to avoid conflicts",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which one of the following best describes what a flow is?",
+    answers: [
+      { text: "The water flowing over Niagara Falls :)", correct: false },
+      {
+        text: "A sequence of steps to automate processes on the Now Platform.",
+        correct: false,
+      },
+      {
+        text: "A script that defines the steps to automate processes on the Now Platform",
+        correct: false,
+      },
+      {
+        text: "A sequence of actions to automate processes on the Now Platform",
+        correct: true,
+      },
+      {
+        text: "A sequence of activities to automate processes on the Now Platform.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following must a user have to access and use the Document Feed for a record?",
+    answers: [
+      {
+        text: "Access to the record to see the live feed group",
+        correct: false,
+      },
+      { text: "Read permissions on the comments field", correct: false },
+      { text: "All of the above", correct: true },
+      {
+        text: "Write permissions on the comments field if the user wants to add comments",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following describes how to parse the response body from REST API call? [pick two]",
+    answers: [
+      {
+        text: "Use the XML Parser step to extract data from the response body.",
+        correct: true,
+      },
+      {
+        text: "Use the JSON Parser step to extract data from the response body.",
+        correct: false,
+      },
+      {
+        text: "Use the Parse Response option in the REST step to write the results of the response to output variables.",
+        correct: false,
+      },
+      {
+        text: "Create a script step that parses the response body and writes the results to output variables.",
+        correct: true,
+      },
+      {
+        text: "Use the OpenAPI Specification to generate output variables from the response body.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 4,
+    question:
+      "Which of the following are possible data sources for importing data into ServiceNow? [pick four]",
+    answers: [
+      { text: "CSV", correct: true },
+      { text: "TXT", correct: false },
+      { text: "JDBC", correct: true },
+      { text: "XML", correct: true },
+      { text: "HTTP", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one statement correctly describes Access Control rule evaluation?",
+    answers: [
+      {
+        text: "Rules are evaluated from the general to the specific, so a table rule must be active to continue",
+        correct: false,
+      },
+      {
+        text: "Rules are evaluated using roles. The role with the most permissions evaluates the rules first",
+        correct: false,
+      },
+      {
+        text: "If more than one rule applies to a row, the older rule is evaluated first",
+        correct: false,
+      },
+      {
+        text: "If a row level rule and a field level rule exist, both rules must be true before an operation is allowed",
+        correct: true,
+      },
     ],
   },
 ];
