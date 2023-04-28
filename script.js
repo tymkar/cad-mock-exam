@@ -1704,30 +1704,350 @@ const questionSet7 = [
 
 const questionSet8 = [
   {
-    question_type: "single-choice",
-    question: "ccc",
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following are settings configured in the Application Settings? More than one response may be correct.",
     answers: [
-      { text: "apple", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      { text: "Accessible from", correct: false },
+      { text: "Allow configuration", correct: false },
+      { text: "Can update", correct: false },
+      { text: "Runtime Access Tracking", correct: true },
+      { text: "Restrict Table Choices", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following describe what is configured in the Content Negotiation section?",
+    answers: [
+      { text: "The available authentication methods.", correct: false },
+      { text: "The supported request formats", correct: true },
+      { text: "The records available to the API.", correct: false },
+      { text: "The supported response formats.", correct: true },
+      {
+        text: "The contract between the web service provider and consumer.",
+        correct: false,
+      },
     ],
   },
   {
     question_type: "single-choice",
-    question: "bbb",
+    question: "What is the purpose of Embedded Help?",
     answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
+      { text: "Coach users on using a custom application", correct: false },
+      {
+        text: "Provide specific written or video-based instructions for a custom application",
+        correct: false,
+      },
+      { text: "Provide help in languages other than English", correct: false },
+      { text: "Display content based on user role", correct: false },
+      {
+        text: "Display content based on query parameter values",
+        correct: false,
+      },
+      { text: "All of the above", correct: true },
     ],
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question:
+      "What value does a Business Rule Condition field return if the field is empty?",
     answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+      { text: "Neither", correct: false },
+      { text: "Both", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "When managing global application files, you can NOT:",
+    answers: [
+      {
+        text: "Add files from global scope to a global application",
+        correct: false,
+      },
+      { text: "Remove files from a global application", correct: false },
+      {
+        text: "Move an application file between global applications",
+        correct: false,
+      },
+      {
+        text: "Move application files into or out of a scoped application",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which utility is used to determine if field names in an Import Set match the field names on the target table when importing data into ServiceNow?",
+    answers: [
+      { text: "Auto Map Matching Fields", correct: true },
+      { text: "Transform Maps", correct: false },
+      { text: "OCI Relationship Builder", correct: false },
+      { text: "Business Service Management Map", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following best describes an inbound email action?",
+    answers: [
+      {
+        text: "Defines which actions ServiceNow takes in response to incoming email",
+        correct: true,
+      },
+      { text: "Cannot manage emails from unknown users", correct: false },
+      {
+        text: "Requires a human to determine which record matches the incoming email",
+        correct: false,
+      },
+      {
+        text: "Can only handle replies to notifications sent from ServiceNow",
+        correct: false,
+      },
+      {
+        text: "Can only work if a matching outbound message is found",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What field does the data pill reference? Input Variables-> User Group-> Group-> Manager-> Name",
+    answers: [
+      {
+        text: "The Name of the user from the conversation's manager.",
+        correct: false,
+      },
+      { text: "The Name of the manager of a group.", correct: true },
+      {
+        text: "The Name of the manager of a group the user is part of.",
+        correct: false,
+      },
+      { text: "The Name of a group the user is part of.", correct: false },
+      { text: "The Name of user from the conversation.", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following are true about scheduling in ATF?",
+    answers: [
+      {
+        text: "Scheduling allows tests to be scheduled to run at a specific date and time.",
+        correct: false,
+      },
+      {
+        text: "Schedules can be configured to test specific browsers and browser versions.",
+        correct: false,
+      },
+      {
+        text: "Schedules can be configured to test specific operating systems and operating system versions",
+        correct: false,
+      },
+      { text: "Schedules run at a configured frequency.", correct: true },
+      {
+        text: "Schedules send results to a watch list of users after completion.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "A single Client Script can execute its script logic when a user loads a record into a form AND when a user saves/submits/updates a form",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "Which of the following are NOT true about the current object? [pick three]",
+    answers: [
+      {
+        text: "The current object is automatically instantiated.",
+        correct: false,
+      },
+      {
+        text: "The current object property values never change after a record is loaded from the database.",
+        correct: true,
+      },
+      {
+        text: "The current and previous objects are always identical.",
+        correct: true,
+      },
+      {
+        text: "The current and previous objects are sometimes identical.",
+        correct: false,
+      },
+      {
+        text: "The properties of the current object are the same for all Business Rules.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which Runtime Access Tracking option prevents a script from accessing resources until explicitly allowed?",
+    answers: [
+      { text: "None", correct: false },
+      { text: "Blocking", correct: false },
+      { text: "Enforcing", correct: true },
+      { text: "Tracking", correct: false },
+      { text: "Validating", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "How can user temporarily become another user for testing purposes?",
+    answers: [
+      {
+        text: "Open the User menu and select the Impersonate User menu item. Select a user to impersonate.",
+        correct: true,
+      },
+      {
+        text: "Open User Administration > Users, select a user, and click the Impersonate User related link.",
+        correct: false,
+      },
+      {
+        text: "Open the User menu and select the Elevate Roles menu item. Select a user to impersonate.",
+        correct: false,
+      },
+      {
+        text: "Open User Administration > Impersonate User and select a user to impersonate.",
+        correct: false,
+      },
+      {
+        text: "Select a user to impersonate with the User Picker in the banner.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following describes the process to test the configured web service call to a ServiceNow instance?",
+    answers: [
+      { text: "Click the Send button and view the results.", correct: false },
+      { text: "Click the Test button and view the results.", correct: true },
+      {
+        text: "Click the Execute Now button and view the results.",
+        correct: false,
+      },
+      {
+        text: "Click the Run Test button and view the results.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "UI Policies require scripting to make form fields Mandatory, Visible, or Read only.",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "The x_12345_lego_set table extends the alm_asset table. Which Access Control is evaluated first when determining whether to grant access to the serial_number field?",
+    answers: [
+      { text: "x_12345_lego_set.serial_number", correct: true },
+      { text: "Ox_12345_lego_set.*", correct: false },
+      { text: "alm_asset.serial_number", correct: false },
+      { text: "alm_asset.*", correct: false },
+      { text: "*serial_number", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Protection policies are not applied when installed via update sets",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following are true when a data source does not have columns or values for mandatory target table fields?",
+    answers: [
+      { text: "The records are imported to the target table", correct: false },
+      {
+        text: "The records cannot be imported to the target table",
+        correct: false,
+      },
+      {
+        text: "The records can be imported if the mandatory fields are not mapped",
+        correct: false,
+      },
+      {
+        text: "The records can be imported if the mandatory fields are mapped",
+        correct: false,
+      },
+      {
+        text: "The records are imported if all mandatory fields are mapped",
+        correct: false,
+      },
+      { text: "All of the above", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following is true for a table with the 'Allow configuration' Application Access option selected?",
+    answers: [
+      {
+        text: "Only the in scope application's scripts can create Business Rules for the table",
+        correct: false,
+      },
+      {
+        text: "Any user with the application's user role can modify the application's scripts",
+        correct: false,
+      },
+      {
+        text: "Out of scope applications can create Business Rules for the table when Can Read is also selected",
+        correct: true,
+      },
+      {
+        text: "Out of scope applications can add new tables to the scoped application",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which items can be configured with multiple roles to grant access?",
+    answers: [
+      { text: "Application", correct: false },
+      { text: "Application Menu", correct: true },
+      { text: "Module", correct: true },
+      { text: "Table", correct: false },
+      { text: "Business Rule", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "",
+    answers: [
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
     ],
   },
   {
