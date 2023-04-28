@@ -708,7 +708,8 @@ const questionSet1 = [
   {
     question_type: "multiple-choice",
     number_of_correct_answers: 3,
-    question: "Which objects can be used in Inbound Action scripts?",
+    question:
+      "Which objects can be used in Inbound Action scripts? [pick three]",
     answers: [
       { text: "email", correct: true },
       { text: "previous", correct: false },
@@ -1075,7 +1076,7 @@ const questionSet1 = [
     question_type: "multiple-choice",
     number_of_correct_answers: 2,
     question:
-      "Which roles grant access to source control repository operations such as importing applications from source control, or linking an application to source control?",
+      "Which roles grant access to source control repository operations such as importing applications from source control, or linking an application to source control? [pick two]",
     answers: [
       { text: "git_admin", correct: false },
       { text: "source_control_admin", correct: false },
@@ -1186,7 +1187,7 @@ const questionSet1 = [
     question_type: "multiple-choice",
     number_of_correct_answers: 2,
     question:
-      "Which of the following features are available to Global applications?",
+      "Which of the following features are available to Global applications? [pick two]",
     answers: [
       { text: "Source Control", correct: false },
       { text: "Delegated Development", correct: false },
@@ -1286,7 +1287,8 @@ const questionSet1 = [
   {
     question_type: "multiple-choice",
     number_of_correct_answers: 3,
-    question: "Which of the following are true for reports in ServiceNow?",
+    question:
+      "Which of the following are true for reports in ServiceNow? [pick three]",
     answers: [
       { text: "Can be run on demand by authorized users.", correct: true },
       { text: "Any user can see any report shared with them", correct: false },
@@ -1385,7 +1387,7 @@ const questionSet1 = [
     question_type: "multiple-choice",
     number_of_correct_answers: 3,
     question:
-      "What are some of the benefits of extending an existing table such as the Task table when creating a new application?",
+      "What are some of the benefits of extending an existing table such as the Task table when creating a new application? [pick three]",
     answers: [
       { text: "Use existing fields with no modifications", correct: true },
       {
@@ -1467,7 +1469,7 @@ const questionSet1 = [
   {
     question_type: "multiple-choice",
     number_of_correct_answers: 3,
-    question: `Which of the following are configured in an Email Notification?`,
+    question: `Which of the following are configured in an Email Notification? [pick three]`,
     answers: [
       { text: "How to send the notification", correct: false },
       { text: "When to send the notification", correct: true },
@@ -1478,7 +1480,7 @@ const questionSet1 = [
   {
     question_type: "multiple-choice",
     number_of_correct_answers: 3,
-    question: `Which of the following statements is true for the Form Designer? (3 options)`,
+    question: `Which of the following statements is true for the Form Designer? [pick three]`,
     answers: [
       {
         text: "To add a section to the form layout, drag it from the Field Types tab to the desired destination on the form.",
@@ -1728,70 +1730,499 @@ const questionSet8 = [
       { text: "deer", correct: false },
     ],
   },
+  {
+    question_type: "single-choice",
+    question: "",
+    answers: [
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question: "",
+    answers: [
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+      { text: "", correct: false },
+    ],
+  },
 ];
 
 const questionSet9 = [
   {
     question_type: "single-choice",
-    question: "ccc",
+    question: "Which of the following are true statements about portals?",
     answers: [
-      { text: "apple", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      { text: "Page layouts are responsive to device type", correct: false },
+      {
+        text: "Page layouts are responsive to screen resolution",
+        correct: false,
+      },
+      { text: "Viewport size changes when a page is resized", correct: false },
+      { text: "Containers can be fixed layout", correct: false },
+      { text: "Containers can be fluid layout", correct: false },
+      { text: "All of the above", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following describe ways to make REST step dynamic? [pick two]",
+    answers: [
+      { text: "Write a script to build the endpoint", correct: false },
+      {
+        text: "Set HTTP Method to POST and the user will be prompted for any values required by the API",
+        correct: false,
+      },
+      {
+        text: "Use a data pill in the Resource Path for any variable information described in the external API's documentation",
+        correct: true,
+      },
+      {
+        text: "Use a data pill in the Query Parameter value for any query parameters described in the external API's documentation",
+        correct: true,
+      },
+      {
+        text: "Create Connection Attributes for any variables and set values for the Connection Attributes in the Connection record",
+        correct: false,
+      },
     ],
   },
   {
     question_type: "single-choice",
-    question: "bbb",
+    question:
+      "Which one of the following is NOT a true statement about a workflow?",
     answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
+      { text: "Can be modified by any user", correct: true },
+      {
+        text: "Is a sequence of activities to automate processes",
+        correct: false,
+      },
+      { text: "Can be triggered by a field value on a record", correct: false },
+      { text: "Executes server-side", correct: false },
+      { text: "Contains activities and transitions", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following are NOT methods from the GlideRecord API? [pick two]",
+    answers: [
+      { text: "addQuery()", correct: false },
+      { text: "addEncodedQuery()", correct: false },
+      { text: "addOrQuery()", correct: true },
+      { text: "addAndQuery()", correct: true },
+      { text: "query()", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following are true about widget options? [pick two]",
+    answers: [
+      {
+        text: "Setting widgets option values affects all instances of a widget",
+        correct: false,
+      },
+      {
+        text: "Widget options are identical for all widget types",
+        correct: false,
+      },
+      {
+        text: "Portal users can change the widget option values",
+        correct: false,
+      },
+      {
+        text: "Developers can add widget options to the widget option schema",
+        correct: true,
+      },
+      {
+        text: "Reference is a valid data type for a widget option",
+        correct: true,
+      },
     ],
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question:
+      "A workflow context contains logging information. Developers can write their own log messages to the workflow context using the Workflow API logging methods. Which one of the following is NOT a Workflow API logging method?",
     answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      { text: "workflow.info", correct: false },
+      { text: "workflow.crit", correct: true },
+      { text: "workflow.debug", correct: false },
+      { text: "workflow.warn", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: "bbb",
+    question:
+      "Which of the following is a strategy for debugging Client Scripts or UI Policies?",
     answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
+      { text: "Browser's Developer Console", correct: false },
+      { text: "Debug UI Policies module", correct: false },
+      { text: "JavaScript try/catch", correct: false },
+      { text: "JavaScript Log and jslog()", correct: false },
+      { text: "Field Watcher", correct: false },
+      { text: "All of the above", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "How can a developer extract data from the response body after calling a REST web service? [pick two]",
+    answers: [
+      {
+        text: "Click the Convert Response Body button to convert the response",
+        correct: false,
+      },
+      {
+        text: "Use the JSON API to convert JSON formatted responses to a JavaScript object",
+        correct: true,
+      },
+      {
+        text: "Use the XMLDocument2 API to extract data from XML formatted responses.",
+        correct: true,
+      },
+      {
+        text: "Use the XMLDocument2 Script Include to parse the XML.",
+        correct: false,
+      },
+      {
+        text: "Use the Convert Response Body wizard to translate the response into an object.",
+        correct: false,
+      },
     ],
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question:
+      "Which one of the following best describes the data import process?",
     answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      {
+        text: "Use a Transform Map to move data from the data source to the staging table. Verify the data integrity then move the records to the target table",
+        correct: false,
+      },
+      {
+        text: "Load the records from the data source into the target table using a Transform Map then verify the data integrity.",
+        correct: false,
+      },
+      {
+        text: "Copy the data source records into a staging table. Copy the records from the staging table to the target table using a Transform Map only if the field names are different between the two tables. Verify the data integrity.",
+        correct: false,
+      },
+      {
+        text: "Load data from the data source into a staging table. Use a Transform Map to move data from the staging table fields to the (Poprawne) target table fields then verify the data integrity.",
+        correct: true,
+      },
+      {
+        text: "Load the records from the data source into the staging table using a Transform Map then verify the data integrity.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "Which of the following are steps in the generalized process for working with events? [pick three]",
+    answers: [
+      { text: "Add an event to the Event Registry", correct: true },
+      { text: "Write a Business Rule", correct: false },
+      { text: "Generate the event", correct: true },
+      { text: "Respond to the event", correct: true },
+      { text: "Create a Scheduled Script Execution", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: "bbb",
+    question:
+      "Where can Admins check which release is running on an ServiceNow instance?",
     answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
+      { text: "Memory Stats module", correct: false },
+      { text: "Stats module", correct: true },
+      { text: "System.upgraded table", correct: false },
+      { text: "Transactions log", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question: "How are Workflows moved between instances?",
     answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      { text: "Workflows are moved using Update Sets", correct: true },
+      { text: "Workflows are moved using Transform Maps", correct: false },
+      { text: "Workflows are moved using Application Sets", correct: false },
+      { text: "Workflows cannot be moved between instances", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which group of permissions is used to control Application and Module access?",
+    answers: [
+      { text: "Access Control Rules", correct: false },
+      { text: "UI Policies", correct: false },
+      { text: "Roles", correct: true },
+      { text: "Assignment Rules", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is a Dictionary Override?",
+    answers: [
+      {
+        text: "A Dictionary Override is an incoming customer update in an Update Set which applies to the same objects as a newer local customer update",
+        correct: false,
+      },
+      {
+        text: "A Dictionary Override is the addition, modification, or removal of anything that could have an effect on IT services",
+        correct: false,
+      },
+      {
+        text: "A Dictionary Override is a task within a workflow that requests an action before the workflow can continue",
+        correct: false,
+      },
+      {
+        text: "A Dictionary Override sets field properties in extended tables",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is the function of user impersonation?",
+    answers: [
+      { text: "Testing and visibility", correct: true },
+      { text: "Activate verbose logging", correct: false },
+      { text: "View custom perspectives", correct: false },
+      { text: "Unlock Application master list", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What information does the System Dictionary contain?",
+    answers: [
+      {
+        text: "The human-readable labels and language settings",
+        correct: false,
+      },
+      { text: "The definition for each table and column", correct: true },
+      {
+        text: "The information on how tables relate to each other",
+        correct: false,
+      },
+      {
+        text: "The language dictionary used for spell checking",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following statements best describes the purpose of an Update Set?",
+    answers: [
+      {
+        text: "An Update Set allows administrators to group a series of changes into a named set and then move this set as a unit to other systems",
+        correct: true,
+      },
+      {
+        text: "By default, an Update Set includes customizations, Business Rules, and homepages",
+        correct: false,
+      },
+      {
+        text: "An Update Set is a group of customizations that is moved from Production to Development",
+        correct: false,
+      },
+      {
+        text: "By default, the changes included in an Update Set are visible only in the instance to which they are applied",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which technique is used to get information from a series of referenced fields from different tables?",
+    answers: [
+      { text: "Table-Walking", correct: false },
+      { text: "Sys_ID Pulling", correct: false },
+      { text: "Dot-Walking", correct: true },
+      { text: "Record-Hopping", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is a schema map?",
+    answers: [
+      {
+        text: "A schema map enables administrators to define records from specific tables as trouble sources for Configuration Items",
+        correct: false,
+      },
+      {
+        text: "A schema map graphically organizes the visual task boards for the CMDB",
+        correct: false,
+      },
+      {
+        text: "A schema map graphically displays the Configuration Items that support a business service",
+        correct: false,
+      },
+      {
+        text: "A schema map displays the details of tables and their relationships in a visual manner, allowing administrators to view (Poprawne) and easily access different parts of the database schema",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following statements describes the contents of the Configuration Management Database (CMDB)?",
+    answers: [
+      {
+        text: "The CMDB contains data about tangible and intangible business assets",
+        correct: true,
+      },
+      {
+        text: "The CMDB contains the Business Rules that direct the intangible, configurable assets used by a company",
+        correct: false,
+      },
+      {
+        text: "The CMDB archives all Service Management PaaS equipment metadata and usage statistics",
+        correct: false,
+      },
+      {
+        text: "The CMDB contains ITIL process data pertaining to configuration items",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "In what order should filter elements be specified?",
+    answers: [
+      { text: "Field, Operator, then Value", correct: true },
+      { text: "Field, Operator, then Condition", correct: false },
+      { text: "Operator, Condition, then Value", correct: false },
+      { text: "Value, Operator, then Field", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following statements is true about Column Context Menus?",
+    answers: [
+      {
+        text: "It displays actions such as creating quick reports, configuring the list, and exporting data",
+        correct: true,
+      },
+      {
+        text: "It displays actions related to filtering options, assigning tags, and search",
+        correct: false,
+      },
+      {
+        text: "It displays actions related to viewing and filtering the entire list",
+        correct: false,
+      },
+      {
+        text: "It displays actions such as view form, view related task, and add relationship",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "When using the Load Data and Transform Map process, what is the Mapping Assist used for?",
+    answers: [
+      { text: "Mapping fields using the Import Log", correct: false },
+      { text: "Mapping fields using Transform History", correct: false },
+      { text: "Mapping fields using an SLA", correct: false },
+      { text: "Mapping fields using a Field Map", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following is used to initiate a flow?",
+    answers: [
+      { text: "A Trigger", correct: true },
+      { text: "Core Action", correct: false },
+      { text: "A spoke", correct: false },
+      { text: "An Event", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Define record producer",
+    answers: [
+      {
+        text: "A record producer is a catalog item that lets users create task-based records from the Service Catalog. It provides an alternate (Poprawne) way for creating records through Service Catalog.",
+        correct: true,
+      },
+      {
+        text: "A record producer is a catalog item that lets users create task-based records from the GlideRecord. It provides an alternate way for creating records through server side scripting.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is the use of a reference qualifier?",
+    answers: [
+      {
+        text: "It is used to restrict the data that can be selected for a reference field.",
+        correct: true,
+      },
+      {
+        text: "It is used to provide data payload to the table",
+        correct: false,
+      },
+      { text: "It is used to display data on the form", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Who can create or update ACL?",
+    answers: [
+      { text: "security_admin creates or updates ACL.", correct: true },
+      { text: "admin", correct: false },
+      { text: "acl_admin", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "It is possible to create incidents automatically based on alerts from Event Management?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What can you use to explore the CMDB hierarchy and table definitions?",
+    answers: [
+      { text: "CMDB Manager", correct: false },
+      { text: "CI Manager", correct: false },
+      { text: "CMDB Schema", correct: false },
+      { text: "CI Class Manager", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Are Business Rules need to be always scripted?",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
     ],
   },
 ];
