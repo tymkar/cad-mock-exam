@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  margin-top: 25vh;
+  margin-top: 20vh;
   width: 800px;
   max-width: 80%;
   background-color: #bbf3f6;
@@ -128,11 +128,22 @@ body {
   align-items: center;
 }
 
-.sets-title {
+.introduction-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicenow-logo {
+  width: 200px;
+  height: 50px;
+}
+
+.select-exam-title {
+  margin-top: 4rem;
   font-size: 1.5rem;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  color: #0a4a82;
+  text-decoration: underline;
 }
 
 .sets {
