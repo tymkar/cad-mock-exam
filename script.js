@@ -1645,29 +1645,255 @@ const questionSet5 = [
 const questionSet6 = [
   {
     question_type: "single-choice",
-    question: "ccc",
+    question: "A graphical view of relationships among tables is a <blank>.",
     answers: [
-      { text: "apple", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      { text: "Schema map", correct: true },
+      { text: "Graphical User Interface", correct: false },
+      { text: "Dependency view", correct: false },
+      { text: "Map source report", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: "bbb",
+    question: "Which one of the following is NOT true for Modules?",
     answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
+      { text: "Modules open content pages", correct: false },
+      {
+        text: "Every Module must be part of an Application Menu",
+        correct: false,
+      },
+      { text: "Access to Modules is controlled with roles", correct: false },
+      { text: "Every Module must be associated with a table", correct: true },
     ],
   },
   {
     question_type: "single-choice",
-    question: "aaa",
+    question: "What are Application Files in a ServiceNow application?",
     answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      {
+        text: "An XML export of an application's table records",
+        correct: false,
+      },
+      { text: "ServiceNow artifacts comprising an application", correct: true },
+      {
+        text: "CSV files containing data imported into an application",
+        correct: false,
+      },
+      { text: "XML exports of an application's Update Set", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is the purpose of the Application Picker?",
+    answers: [
+      { text: "Select an application to view", correct: true },
+      {
+        text: "Choose an application to edit and set the Application Scope",
+        correct: false,
+      },
+      {
+        text: "Select an application as a favorite in the Application Navigator",
+        correct: false,
+      },
+      { text: "Choose an application to download and install", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Can inherited fields be deleted from a table?",
+    answers: [
+      {
+        text: "Yes, select the red X in the left-most column in the table definition",
+        correct: false,
+      },
+      {
+        text: "Yes, but only if there has never been any saved field data",
+        correct: false,
+      },
+      { text: "Yes, but only if they are text fields", correct: false },
+      {
+        text: "No, inherited fields cannot be deleted from a child table",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What scripts, reports, and other application artifacts will be in a published application:",
+    answers: [
+      {
+        text: "Enter the name of the Application in the Global search field",
+        correct: false,
+      },
+      {
+        text: "Examine the Application Files Related List in the application to be published",
+        correct: true,
+      },
+      { text: "Open the list of Update Sets for the instance", correct: false },
+      {
+        text: "Open the artifact records individually to verify the value in the Application field",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which one of the following is NOT a UI Action type?",
+    answers: [
+      { text: "List choice", correct: false },
+      { text: "List banner button", correct: false },
+      { text: "Form button", correct: false },
+      { text: "Form choice", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which one of the following is true for a Script Include with a Protection Policy value of Protected?",
+    answers: [
+      {
+        text: "Any user with the protected_edit role can see and edit the Script Include",
+        correct: false,
+      },
+      {
+        text: "The Protection Policy is applied only if the glide.app.apply_protection system property value is true",
+        correct: false,
+      },
+      {
+        text: "The Protection policy option can only be enabled by a user with the admin role",
+        correct: false,
+      },
+      {
+        text: "The Protection Policy is applied only if the application is downloaded from the ServiceNow App Store",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "When evaluating Access Controls, ServiceNow searches and evaluates:",
+    answers: [
+      { text: "Only for matches on the current table", correct: false },
+      {
+        text: "From the most specific match to the most generic match",
+        correct: true,
+      },
+      { text: "Only for matches on the current field", correct: false },
+      {
+        text: "From the most generic match to the most specific match",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "When configuring a REST Message, the Endpoint is:",
+    answers: [
+      {
+        text: "The commands to the REST script to stop execution",
+        correct: false,
+      },
+      {
+        text: "Information about the format of the returned data",
+        correct: false,
+      },
+      {
+        text: "The URI of the data to be accessed, queried, or modified",
+        correct: true,
+      },
+      {
+        text: "The response from the provider indicating there is no data to send back",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Application developers configure ServiceNow using industry standard JavaScript to...",
+    answers: [
+      {
+        text: "Enable the right-click to edit the context menus on applications in the navigator",
+        correct: false,
+      },
+      {
+        text: "Customize the organization's company logo and banner text",
+        correct: false,
+      },
+      { text: "Extend and add functionality", correct: true },
+      { text: "Configure the outgoing email display name", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "How must Application Access be configured to prevent all other private application scopes from creating configuration records on an application's data tables?",
+    answers: [
+      {
+        text: "You must create Access Controls to prevent all other application scopes from creating configuration records on an application's data tables rather than using Application Access",
+        correct: false,
+      },
+      {
+        text: "Set the Accessible from field value to This application scope only and de- select the Allow access to this table via web services option",
+        correct: false,
+      },
+      {
+        text: "Set the Accessible from field value to All application scopes and de-select the Can create option",
+        correct: false,
+      },
+      {
+        text: "Set the Accessible from field value to This application scope only",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What module in the Service Catalog application does an Administrator access to begin creating a new catalog item?",
+    answers: [
+      { text: "Maintain Categories", correct: false },
+      { text: "Maintain Items", correct: true },
+      { text: "Content Items", correct: false },
+      { text: "Items", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following steps can be used to import new data into ServiceNow from a spreadsheet?",
+    answers: [
+      { text: "Select Data Source, Schedule Transform", correct: false },
+      { text: "Load Data, Create Transform Map, Run Transform", correct: true },
+      {
+        text: "Define Data Source, Select Transform Map, Run Transform",
+        correct: false,
+      },
+      {
+        text: "Select Import Set, Select Transform Map, Run Transform",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "How is the Event Log different from the Event Registry?",
+    answers: [
+      {
+        text: "Event Log contains generated Events, the Event Registry is a table of Event definitions",
+        correct: true,
+      },
+      {
+        text: "Event Log is formatted in the Log style, the Event Registry displays different fields",
+        correct: false,
+      },
+      {
+        text: "Event Log lists Events that were triggered by integrations, the Event Registry lists the Events that were triggered during the day (24-hour period)",
+        correct: false,
+      },
+      { text: "Event Log is the same as the Event Registry", correct: false },
     ],
   },
   {
@@ -1792,7 +2018,7 @@ const questionSet7 = [
   },
   {
     question_type: "single-choice",
-    question: "_____ optionmakes a field a record's unique key",
+    question: "___________ option makes a field a record's unique key",
     answers: [
       { text: "Coalesce", correct: true },
       { text: "Unique", correct: false },
