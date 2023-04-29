@@ -1670,36 +1670,6 @@ const questionSet6 = [
       { text: "deer", correct: false },
     ],
   },
-];
-
-const questionSet7 = [
-  {
-    question_type: "single-choice",
-    question: "ccc",
-    answers: [
-      { text: "apple", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
-    ],
-  },
-  {
-    question_type: "single-choice",
-    question: "bbb",
-    answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
-    ],
-  },
-  {
-    question_type: "single-choice",
-    question: "aaa",
-    answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
-    ],
-  },
   {
     question_type: "single-choice",
     question: "",
@@ -1720,6 +1690,515 @@ const questionSet7 = [
       { text: "", correct: false },
       { text: "", correct: false },
       { text: "", correct: false },
+    ],
+  },
+];
+
+const questionSet7 = [
+  {
+    question_type: "single-choice",
+    question: "ServiceNow is good for media streaming",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "g_user.hasRole('x_foo_app_user), does this return true for the admin role?",
+    answers: [
+      { text: "Yes", correct: true },
+      { text: "No", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What Business Rule type execute their logic before a database operation occurs?",
+    answers: [
+      { text: "After", correct: false },
+      { text: "Before", correct: true },
+      { text: "Async", correct: false },
+      { text: "Display", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What Business Rule type execute their logic immediately after a database operation occurs and before the resulting form is rendered for the user?",
+    answers: [
+      { text: "After", correct: true },
+      { text: "Before", correct: false },
+      { text: "Async", correct: false },
+      { text: "Display", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What Business Rule type execute asynchronously?",
+    answers: [
+      { text: "After", correct: false },
+      { text: "Before", correct: false },
+      { text: "Async", correct: true },
+      { text: "Display", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What allows direct scripting access to fields and field values of related records?",
+    answers: [
+      { text: "Dot-Walking", correct: true },
+      { text: "GlideSystem", correct: false },
+      { text: "GlideRecord", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "An ACL can't have a 'NONE' Access Control and a '*' Access Control",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Can an application system property be a reference field?",
+    answers: [
+      { text: "Yes", correct: false },
+      { text: "No", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "ServiceNow can only respond to events which are registered with the:",
+    answers: [
+      { text: "Event Log", correct: false },
+      { text: "Event Registry", correct: true },
+      { text: "Events Queue", correct: false },
+      { text: "Email Logs", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Can default homepages be customized?",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "_____ optionmakes a field a record's unique key",
+    answers: [
+      { text: "Coalesce", correct: true },
+      { text: "Unique", correct: false },
+      { text: "Key", correct: false },
+      { text: "ID", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Assume an application scope, sn_my_app, exists. Scripts from other application scopes can never delete records from tables in the sn_my_app scope.",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "An application owns its tables and determine whether other applications can access resources from them",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Developers DO/DO NOT create application file records directly from the Application File table",
+    answers: [
+      { text: "Do", correct: false },
+      { text: "Do not", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Removing a field from a form using the Form Designer deletes the field from the database table",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Team Development uses Git to manage versions",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Update sets track customizations where the table has an 'update_synch' dictionary attribute",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "More than one update set can be the default set for any application scope",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "ServiceNow is good for real-time data delivery and update from external sources",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "An unpublished workflow will be captured in an update set.",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "You can define visibility of variables on a task form using the workflow",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Sending an email notification is possible via an inbound action",
+    answers: [
+      { text: "True", correct: true },
+      { text: "False", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "Setting up an application in Guided Application Creator guides you through what three steps? [pick three]",
+    answers: [
+      { text: "Load new Integration Hub spokes", correct: false },
+      { text: "Define user roles", correct: true },
+      { text: "Customize a Flow Action", correct: false },
+      { text: "Launch Virtual Agent", correct: false },
+      { text: "Choose User Experience", correct: true },
+      { text: "Table configurations", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "The ServiceNow Studio application offers a simple way to do what three things from a tabbed environment? [pick three]",
+    answers: [
+      { text: "Use Agent Affinity", correct: false },
+      { text: "Create application files", correct: true },
+      { text: "Use Advanced Work Assignment", correct: false },
+      { text: "Review application files", correct: true },
+      { text: "Explore Conversational Interfaces", correct: false },
+      { text: "Update application files", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "In the Next Experience, what provides context for where you are in your instance, and enables you to favorite the item you're viewing?",
+    answers: [
+      { text: "All menu", correct: false },
+      { text: "Al search", correct: false },
+      { text: "Contextual app pill", correct: true },
+      { text: "Instance Personalization", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "With the Next Experience landing page, you can access workspaces, classic lists and forms, applications, history, and favorites through the:",
+    answers: [
+      { text: "Standard Homepage Layout", correct: false },
+      { text: "Dual pane Next Experience UI", correct: false },
+      { text: "Standard Dashboard Layout", correct: false },
+      { text: "Triple pane Next Experience UI", correct: false },
+      { text: "Single pane Next Experience UI", correct: true },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question:
+      "ServiceNow Studio includes which three capabilities? [pick three]",
+    answers: [
+      { text: "Launch Machine Learning", correct: false },
+      { text: "Integrate with source control", correct: true },
+      { text: "Customize a Flow Action", correct: false },
+      {
+        text: "Create an application and application artifacts",
+        correct: true,
+      },
+      { text: "Load new Integration Hub spokes", correct: false },
+      { text: "Perform code search", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which one of the following is NOT a UI Action type?",
+    answers: [
+      { text: "List choice", correct: false },
+      { text: "Form button", correct: false },
+      { text: "List banner button", correct: false },
+      { text: "Form choice", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "In the Next Experience, to retrieve any item in the menu, use:",
+    answers: [
+      { text: "Al search", correct: false },
+      { text: "Instance Personalization", correct: false },
+      { text: "All menu", correct: true },
+      { text: "Contextual app pill", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "You are writing an Async Business Rule for a table in a different scope than the Business Rule record. Which one of the following database operations CANNOT be part of the Async Business Rule's configuration?",
+    answers: [
+      { text: "Query", correct: true },
+      { text: "Ipdate", correct: false },
+      { text: "Delete", correct: false },
+      { text: "Insert", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "ServiceNow Desktop applications automatically run on which platform(s)",
+    answers: [
+      { text: "Desktop", correct: false },
+      { text: "Smartphone", correct: false },
+      { text: "Desktop and Smartphone", correct: false },
+      { text: "Desktop and Tablet", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "How do you configure a Scheduled Job to execute on the last day of every month?",
+    answers: [
+      {
+        text: "Set the Run field value to Periodically and the Repeat Interval value to 31",
+        correct: false,
+      },
+      {
+        text: "Set the Run field value to Periodically and the Repeat Interval value to Last Day",
+        correct: false,
+      },
+      {
+        text: "Set the Run field value to Monthly and the Day field value to 31",
+        correct: true,
+      },
+      {
+        text: "Set the Run field value to Monthly and the Day field value to Last Day",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which one of the following is NOT a GlideUser (g_user) method?",
+    answers: [
+      { text: "userName()", correct: true },
+      { text: "getFullName()", correct: false },
+      { text: "hasRole()", correct: false },
+      { text: "hasRoleExactly()", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which utility is used to determine if field names in an Import Set match the field names on the target table when importing data into ServiceNow?",
+    answers: [
+      { text: "Transform Maps", correct: false },
+      { text: "Auto Map Matching Fields", correct: true },
+      { text: "OCI Relationship Builder", correct: false },
+      { text: "Business Service Management Map", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "When managing global application files, you can NOT:",
+    answers: [
+      {
+        text: "Add files from global scope to a global application",
+        correct: false,
+      },
+      { text: "Remove files from a global application", correct: false },
+      {
+        text: "Move an application file between global applications",
+        correct: false,
+      },
+      {
+        text: "Move application files into or out of a scoped application",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Assume an application scope, sn_my_app, exists. Scripts from other application scopes can never delete records from tables in the sn_my_app scope. True or False?",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Removing a field from a form using the Form Designer deletes the field from the database table. True or False?",
+    answers: [
+      { text: "True", correct: false },
+      { text: "False", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following is not a Report Type in ServiceNow?",
+    answers: [
+      { text: "Trend", correct: false },
+      { text: "Funnel", correct: false },
+      { text: "Chart", correct: true },
+      { text: "Pyramid", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `The Application Access settings for a table are:
+
+    A. Global application scope
+    B. All application scopes
+    C. This application scope
+    D. ServiceNow application scope`,
+    answers: [
+      { text: "A and B", correct: false },
+      { text: "B and C", correct: true },
+      { text: "C and D", correct: false },
+      { text: "A and C", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Identify the incorrect statement about the Team Development application in ServiceNow",
+    answers: [
+      {
+        text: "Team Development allows for branching operations including pushing and pulling record versions between instances",
+        correct: false,
+      },
+      {
+        text: "Team Development cannot use Git to manage versions",
+        correct: true,
+      },
+      {
+        text: "Developers can compare a development instance to another development instance.",
+        correct: false,
+      },
+      {
+        text: "The Dashboard is a central location for all team development activities.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of these is used to control access to features and capabilities in applications and modules.",
+    answers: [
+      { text: "Department", correct: false },
+      { text: "Group", correct: false },
+      { text: "Role", correct: true },
+      { text: "Company", correct: false },
+      { text: "Organization", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following are NOT methods from the GlideRecord API? [pick two]",
+    answers: [
+      { text: "addQuery()", correct: false },
+      { text: "addEncodedQuery()", correct: false },
+      { text: "addOrQuery()", correct: true },
+      { text: "addAndQuery()", correct: true },
+      { text: "query()", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which one the following best describes an Angular Providers?",
+    answers: [
+      { text: "Directive", correct: true },
+      { text: "Controller", correct: false },
+      { text: "Widget API Class", correct: false },
+      { text: "Event", correct: false },
+      { text: "Function", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question: "When do onSubmit Client Scripts execute their script logic?",
+    answers: [
+      { text: "When a user clicks the Submit button", correct: true },
+      { text: "When a user clicks the Delete button", correct: false },
+      { text: "When a user clicks the Update button", correct: true },
+      {
+        text: "When a user clicks the Save menu item in the Additional Actions menu.",
+        correct: false,
+      },
+      {
+        text: "When a user clicks the Lookup button on a reference field.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What one of the following is the correct syntax for adding dynamic content to a notification's HTML message field?",
+    answers: [
+      { text: "current.short_description", correct: false },
+      { text: "$current.short_description", correct: false },
+      { text: "${current.short_description}", correct: false },
+      { text: "$short_description", correct: false },
+      { text: "${short_description}", correct: true },
     ],
   },
 ];
