@@ -1524,30 +1524,824 @@ const questionSet1 = [
 
 const questionSet2 = [
   {
-    question_type: "single-choice",
-    question: "set 2 pick pick pick a fruit",
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "How can a developer extract data from the response body after calling a REST web service?",
     answers: [
-      { text: "apple", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      {
+        text: "Use the Convert Response Body wizard to translate the response into an object.",
+        correct: false,
+      },
+      {
+        text: "Use the XMLDocument2 API to extract data from XML formatted responses.",
+        correct: true,
+      },
+      {
+        text: "Use the XMLDocument2 Script Include to parse the XML.",
+        correct: false,
+      },
+      {
+        text: "Use the JSON API to convert JSON formatted responses to a JavaScript object",
+        correct: true,
+      },
+      {
+        text: "Click the Convert Response Body button to convert the response.",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "What are the UDC (user experience) options available in Guided Application Creator?",
+    answers: [
+      { text: "Classic", correct: true },
+      { text: "Desktop", correct: false },
+      { text: "Workspace", correct: false },
+      { text: "Mobile", correct: true },
+      { text: "Tablet", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: " set 2pick a fruitty",
+    question:
+      "When evaluating Access Controls, ServiceNow searches and evaluates:",
     answers: [
-      { text: "appppple", correct: true },
-      { text: "poppptato", correct: false },
-      { text: "deepppr", correct: false },
+      { text: "Only for matches on the current table", correct: false },
+      {
+        text: "From the most generic match to the most specific match",
+        correct: false,
+      },
+      {
+        text: "From the most specific match to the most generic match",
+        correct: true,
+      },
+      { text: "Only for matches on the current field", correct: false },
     ],
   },
   {
     question_type: "single-choice",
-    question: " set2 pick a potato",
+    question:
+      "When ServiceNow receives an inbound email it attempts to match the sender to a user record. Which one of the following is NOT true?",
     answers: [
-      { text: "potato", correct: true },
-      { text: "potato", correct: false },
-      { text: "deer", correct: false },
+      {
+        text: "Inbound Action scripts can reference the user using methods such as gs.getUserName()",
+        correct: false,
+      },
+      {
+        text: "If no match is found the email is sent to the Inbox Junk folder",
+        correct: true,
+      },
+      {
+        text: "If a match is found, the user is impersonated for the execution of the Inbound Actions",
+        correct: false,
+      },
+      {
+        text: "If automatic user creation is disabled, the Guest user is impersonated",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which role is required to access Guide Application Creator?",
+    answers: [
+      { text: "sn_g_app_creator.app_creator", correct: true },
+      { text: "sn_app_creator.app_creator", correct: false },
+      { text: "sn_gac.app_creator", correct: false },
+      { text: "sn_developer.app_creator", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following are NOT methods from the GlideRecord API?",
+    answers: [
+      { text: "addOrQuery()", correct: true },
+      { text: "addQuery()", correct: false },
+      { text: "addAndOuery()", correct: true },
+      { text: "addEncodedQuery()", correct: false },
+      { text: "query()", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following is NOT a type of annotation?",
+    answers: [
+      { text: "Info Box Yellow", correct: true },
+      { text: "Text", correct: false },
+      { text: "Info Box Red", correct: false },
+      { text: "Section Separator", correct: false },
+      { text: "Line Separator", correct: false },
+      { text: "Info Box Blue", correct: false },
+      { text: "Section Details", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following is NOT a type of annotation?",
+    answers: [
+      { text: "Failed", correct: false },
+      { text: "Access denied", correct: false },
+      { text: "Passed", correct: false },
+      {
+        text: "Indicates the ACL is already in the cache and does not need to be re-evaluated",
+        correct: true,
+      },
+      { text: "Access granted", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which Script Debugger feature helps filter debugging searches to quickly narrow down script problems?",
+    answers: [
+      { text: "Script Search", correct: false },
+      { text: "Session Tracer", correct: false },
+      { text: "Script Filter", correct: false },
+      { text: "Script Tracer", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "An application has a table named MyTable with the following three fields: field1, field2, field3. Table.none is set for READ for the Admin and Itil roles. Table.field3 is set for the READ by the Ad min role only. What with the Itil role be able to read? (select one)",
+    answers: [
+      { text: "field2, field3", correct: false },
+      { text: "fieldl, field2", correct: true },
+      { text: "fieldl, field2, field3", correct: false },
+      { text: "fieldl, field3", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "In Form Designer, when you edit the label of a field on a child table, the label is updated on?",
+    answers: [
+      { text: "Child table", correct: true },
+      { text: "Parent table", correct: false },
+      { text: "Base table", correct: false },
+      { text: "All tables", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What one of the following is the correct syntax for adding dynamic content to a notifications HTML message field?",
+    answers: [
+      { text: "current.short_description", correct: false },
+      { text: "${short_description}", correct: true },
+      { text: "$current.short_description", correct: false },
+      { text: "$short_description", correct: false },
+      { text: "S{current.short_description}", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question:
+      "Which of the following is NOT a type of authentication used by RESTAPIs?",
+    answers: [
+      { text: "0Auth 2.0", correct: true },
+      { text: "JDBC", correct: true },
+      { text: "Basic Auth", correct: false },
+      { text: "CIM", correct: false },
+      { text: "Mutual authentication using protocol profiles", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the below is the best practice for adding instructions to a form?",
+    answers: [
+      { text: "Populated read only field", correct: false },
+      { text: "Form Annotations", correct: true },
+      { text: "Context menu or UI Action", correct: false },
+      { text: "Related links to wiki pages", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "The option in Table configuration that allows this table to be extended from?",
+    answers: [
+      { text: "Can be Extended", correct: false },
+      { text: "Extended By", correct: false },
+      { text: "Extensible", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following function is NOT available in the ServiceNow REST API?",
+    answers: [
+      { text: "PATCH", correct: false },
+      { text: "DELETE", correct: false },
+      { text: "POST", correct: false },
+      { text: "PUT", correct: false },
+      { text: "COPY", correct: true },
+      { text: "GET", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "How does ServiceNow match inbound email to existing records?",
+    answers: [
+      { text: "Subject Line", correct: false },
+      { text: "Watermark", correct: true },
+      { text: "sys_id", correct: false },
+      { text: "Record link", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "When debugging a script a developer can log breakpoints or conditional log points to log messages to the console at specific lines, and remove log points when they are done debugging them. Which system property must be set to true to enable log points?",
+    answers: [
+      { text: "com.glide.index_suggestion.debug", correct: false },
+      { text: "glide.debug.log_point", correct: true },
+      { text: "glide.debugger.log.ui", correct: false },
+      { text: "glide.ui.js_can_debug", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following is NOT report type in ServiceNow reports?",
+    answers: [
+      { text: "Trend", correct: false },
+      { text: "List", correct: false },
+      { text: "Line", correct: false },
+      { text: "Chart", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following is NOT report type in ServiceNow reports?",
+    answers: [
+      { text: "Trend", correct: false },
+      { text: "List", correct: false },
+      { text: "Line", correct: false },
+      { text: "Chart", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which module creates a user for a Automated Test Framework?",
+    answers: [
+      { text: "User Creation", correct: false },
+      { text: "Create Group", correct: false },
+      { text: "Create a User", correct: true },
+      { text: "Create Role", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 7,
+    question: "What are the core activities of a Workflow?",
+    answers: [
+      { text: "Notifications", correct: true },
+      { text: "Timers", correct: true },
+      { text: "Service Catalog", correct: true },
+      { text: "Subflows", correct: true },
+      { text: "Test", correct: false },
+      { text: "Conditions", correct: true },
+      { text: "Utilities", correct: true },
+      { text: "Approvals", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "How are flow variables access in the flow designer data panel?",
+    answers: [
+      { text: "Scratchpad variables", correct: false },
+      { text: "Data pills", correct: true },
+      { text: "New tabs", correct: false },
+      { text: "Newly generated icons", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following pops out a special field messages?",
+    answers: [
+      { text: "g_form.addFieldMessage()", correct: false },
+      { text: "g_form.addlnfoMessage()", correct: false },
+      { text: "g_form.addErrorMessage()", correct: false },
+      { text: "g_form.showFieldMsg()", correct: true },
+      { text: "g_form.showFieldMessage()", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the below is not a valid state for a scheduled job in ServiceNow instance?",
+    answers: [
+      { text: "Ready", correct: false },
+      { text: "Error", correct: false },
+      { text: "Queued", correct: false },
+      { text: "Waiting for approval", correct: true },
+      { text: "Running", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which protects applications by identifying and restricting access to application files and data?",
+    answers: [
+      { text: "ACLs", correct: false },
+      { text: "Application Scope", correct: true },
+      { text: "Roles", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is the name of the guided application creator plugin?",
+    answers: [
+      { text: "glide.sn-guided-app-creator", correct: false },
+      { text: "com.glide.sn-guided-creator-app", correct: false },
+      { text: "com.glide.sn-guided-app-creator", correct: true },
+      { text: "com.glide.guided-app-creator", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which API provides methods to translate text into multiple languages in real life?",
+    answers: [
+      { text: "Genius Result Answer", correct: false },
+      { text: "Genius Translation", correct: false },
+      { text: "Dynamic Result Answer", correct: false },
+      { text: "Dynamic Translation", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "When creating an application via Guided Application Creator, which of the following is NOT a user experience options?",
+    answers: [
+      { text: "Classic", correct: false },
+      { text: "Portal", correct: true },
+      { text: "Workplace", correct: true },
+      { text: "Mobile", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following would not be good fit for an application to run on the ServiceNow instance?",
+    answers: [
+      { text: "Billing & Cost Management application", correct: false },
+      { text: "Virtual Reality Gaming application", correct: true },
+      { text: "Facilities Management application", correct: false },
+      { text: "A meeting room scheduling application", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "When managing global application files, you can NOT:",
+    answers: [
+      {
+        text: "Move application files into or out of scoped application",
+        correct: true,
+      },
+      {
+        text: "Move an application file between global applications",
+        correct: false,
+      },
+      { text: "Remove files from a global application", correct: false },
+      {
+        text: "Add files from global scope to a global application",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "What is not true about email notifications?",
+    answers: [
+      { text: "What", correct: false },
+      { text: "How", correct: true },
+      { text: "Who", correct: false },
+      { text: "When", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following actions is not supported by Studio?",
+    answers: [
+      { text: "Integrate with source control", correct: false },
+      { text: "Format code indentation with JS Beautify", correct: false },
+      { text: "Enable context menu options to modify data", correct: true },
+      { text: "Download only the required session logs.", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Application files in a ServiceNow application are:",
+    answers: [
+      { text: "XML exports of an application export set", correct: false },
+      {
+        text: "Artifacts comprising the ServiceNow application",
+        correct: true,
+      },
+      {
+        text: "An xml export of the applications table records",
+        correct: false,
+      },
+      {
+        text: "csv files containing data imported into an application",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "You are writing an Async Business Rule for a table in a different scope than the Business Rule record. Which one of the following database operations CANNOT be part of the Async Business Rules configuration?",
+    answers: [
+      { text: "Insert", correct: false },
+      { text: "Query", correct: true },
+      { text: "Delete", correct: false },
+      { text: "Update", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which one of the following best describes what a flow is?",
+    answers: [
+      {
+        text: "A script that defines the steps to automate processes on the platform",
+        correct: false,
+      },
+      {
+        text: "A sequence of steps to automate processes on the platform",
+        correct: false,
+      },
+      {
+        text: "A sequence of actions to automate processes on the platform",
+        correct: true,
+      },
+      {
+        text: "A sequence of activities to automate processes on the platform",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "Which of the following objects does a before business rule have access to?",
+    answers: [
+      { text: "previous", correct: false },
+      { text: "GlideRecord", correct: false },
+      { text: "current", correct: false },
+      { text: "All the above", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "If the Create module field is selected when creating a table, what is the new modules default behavior?",
+    answers: [
+      {
+        text: "Open an empty form so new record can be created",
+        correct: false,
+      },
+      { text: "Display a list of all records from the table", correct: true },
+      { text: "Display an empty homepage for the application", correct: false },
+      {
+        text: "Open a link to wiki article with instructions on how to customize the behavior of the new module",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "What debugging method you use in the server side scripting in a scoped application?",
+    answers: [
+      { text: "gs.info()", correct: true },
+      { text: "gs.log()", correct: false },
+      { text: "gs.addlnfoMessage()", correct: false },
+      { text: "gs.debuglog()", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: "Which of the following modules enables security rule debugging?",
+    answers: [
+      {
+        text: "Access Control > Debugging > Debug Security Rule",
+        correct: false,
+      },
+      {
+        text: "System Security > Session Debug > Debug Security Rules",
+        correct: false,
+      },
+      {
+        text: "System Diagnostics > Debugging > Debug Security Rules",
+        correct: false,
+      },
+      {
+        text: "System Diagnostics > Session Debug > Debug Security Rules",
+        correct: false,
+      },
+      {
+        text: "System Security > Debugging > Debug Security Rules",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question:
+      "In a business rule which of the following returns the sys_id of the current logged in user?",
+    answers: [
+      { text: "gs.getUserSysID()", correct: false },
+      { text: "gs.getUserID()", correct: true },
+      { text: "g_form.getUserID()", correct: false },
+      { text: "g_form.getUserSysID()", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following statements must evaluate to true to grant a user access to application tables record?
+    a) Conditions configured in the access controls must evaluate to true
+    b) Scripts configured in the access control must evaluate to true
+    c) The user has one of the roles specified in the required roles related list
+    d) Other matching access controls for the records evaluate to true`,
+    answers: [
+      { text: "a and c", correct: false },
+      { text: "a,b,c", correct: false },
+      { text: "a and b", correct: false },
+      { text: "a,b,c and d", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following is NOT an example of when an application might use a Scheduled Script Execution(Scheduled Job)?`,
+    answers: [
+      {
+        text: "The application needs to send weekly email remainders",
+        correct: false,
+      },
+      {
+        text: "The application needs to query the database every day to look for a unassigned records",
+        correct: false,
+      },
+      {
+        text: "The application needs to run a clean up script on the last day of every month",
+        correct: false,
+      },
+      {
+        text: "The application needs to run a client-side script at the same time every day",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which one of the following is true about the Client side scripted security?`,
+    answers: [
+      {
+        text: "Client side scripts have access to the GlideSystem(gs) user methods",
+        correct: false,
+      },
+      {
+        text: "Client side scripts have access to both GlideSystem(gs) and GlideUser(g_user) methods",
+        correct: false,
+      },
+      {
+        text: "Client side scripts have access to the GlideUser(g_user) user methods",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question: `What does the code search feature do in the studio?`,
+    answers: [
+      { text: "Searching in all applications", correct: true },
+      { text: "Searching in your application", correct: true },
+      { text: "Search from a list of applications", correct: false },
+      { text: "Searching in a business rule", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `As it relates ServiceNow reporting, which of the following statements describes what a metric can do?`,
+    answers: [
+      {
+        text: "A metric is used to measure and evaluate the effectiveness of IT service management processes",
+        correct: true,
+      },
+      {
+        text: "A metric is a report gauge used on homepages to display real-time data",
+        correct: false,
+      },
+      {
+        text: "A metric is a time measurement used to report the effectiveness of workflows and SLAs",
+        correct: false,
+      },
+      {
+        text: "A metric is a comparative measurement used to report the effectiveness of workflows and SLAs",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which utility is used to determine if field names in an Import Set match the field names on the target table when importing data into ServiceNow?`,
+    answers: [
+      { text: "Business Service Management Map", correct: false },
+      { text: "Transform Maps", correct: false },
+      { text: "Auto Map Matching Fields", correct: true },
+      { text: "CI Relationship Builder", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following scripts do not always run on the server side?`,
+    answers: [
+      { text: "Business Rule", correct: false },
+      { text: "Script Includes", correct: false },
+      { text: "UI Action", correct: true },
+      { text: "Script Action", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following can be used to place a report on a Homepage?`,
+    answers: [
+      { text: "Tag", correct: false },
+      { text: "Gauge", correct: true },
+      { text: "Catalog", correct: false },
+      { text: "Gadget", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question: `Which of the following variab'es are NOT available in all Business Rules?`,
+    answers: [
+      { text: "g_scratchpad", correct: true },
+      { text: "GlideSystem", correct: false },
+      { text: "previous", correct: true },
+      { text: "current", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following variab'es are NOT available in all Business Rules?`,
+    answers: [
+      { text: "Client Scripts", correct: false },
+      { text: "Application Rules", correct: false },
+      { text: "Roles", correct: true },
+      { text: "Access Controls", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `What are the 2 core base tables from which all other tables are extended in ServiceNow?`,
+    answers: [
+      { text: "incident and cmdb_ci", correct: false },
+      { text: "task and cmdb", correct: true },
+      { text: "task and cmdb_model", correct: false },
+      { text: "incident and cmdb_rel_ci", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following API methods are used when working with datetime in a privately scoped application?`,
+    answers: [
+      { text: "GlideDateTime", correct: true },
+      { text: "gs.nowDateTime()", correct: false },
+      { text: "GlideSystem", correct: false },
+      { text: "GlideRecord", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question: `Identify the way(s) an application can respond to an Event generated by the gs.eventQueue() method.`,
+    answers: [
+      { text: "Script Action", correct: true },
+      { text: "UI Policy", correct: false },
+      { text: "Email Notification", correct: true },
+      { text: "Scheduled Job", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which of the following statements is true for managing applications purchased from the Store?`,
+    answers: [
+      {
+        text: "Applications that belong to other organizations can be changed.",
+        correct: false,
+      },
+      {
+        text: "There are separate entitlements for application-customizations.",
+        correct: false,
+      },
+      {
+        text: "Applications that belong to other organizations can be customized.",
+        correct: false,
+      },
+      {
+        text: "Customizations cannot revert back to the base system application.",
+        correct: true,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which method is used to retrieve system property?`,
+    answers: [
+      { text: "gs.getAppProperty()", correct: false },
+      { text: "g_form.getProperty()", correct: false },
+      { text: "g_form.getAppProperty()", correct: false },
+      { text: "gs.getProperty()", correct: true },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `What is true about homepages on mobile?`,
+    answers: [
+      { text: "Same as desktop homepages in every way", correct: false },
+      {
+        text: "Same as desktop homepages without the delete option",
+        correct: false,
+      },
+      { text: "There are no homepages on mobile", correct: true },
+      {
+        text: "Same as desktop homepages with the delete option",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `What is the main purpose of Integration Hub in ServiceNow?`,
+    answers: [
+      {
+        text: "Enables execution of third-party APIs as part of a flow when a specific event occurs in ServiceNow",
+        correct: true,
+      },
+      {
+        text: "Activity in workflow designer to integrate 3rd party applications",
+        correct: false,
+      },
+      {
+        text: "Custom application from ServiceNow store used for importing data into ServiceNow",
+        correct: false,
+      },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `The getCurrentDomainID() method is part of which scoped class?`,
+    answers: [
+      { text: "Scoped DCManager", correct: false },
+      { text: "Scoped GlideSession", correct: true },
+      { text: "Scoped Domain", correct: false },
+      { text: "GlideRecord", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 3,
+    question: `Which of the following are steps in the generalized process for working with events?`,
+    answers: [
+      { text: "Respond to the event", correct: true },
+      { text: "Generate the event", correct: true },
+      { text: "Write a Business Rule", correct: false },
+      { text: "Add an event to the Event Registry", correct: true },
+      { text: "Create a Scheduled Script Execution", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which method is used in emulating mobile for testing?`,
+    answers: [
+      { text: "$t.do", correct: false },
+      { text: "$mobile.do", correct: false },
+      { text: "$m.do", correct: true },
+      { text: "$tablet.do", correct: false },
+    ],
+  },
+  {
+    question_type: "single-choice",
+    question: `Which one of the following is NOT a GlideUser (g_user) method?`,
+    answers: [
+      { text: "getFullName()", correct: false },
+      { text: "hasRole()", correct: false },
+      { text: "userName", correct: true },
+      { text: "hasRoleExactly()", correct: false },
     ],
   },
 ];
