@@ -131,6 +131,13 @@ function showQuestion(question, questionNumber) {
 
   questionElement.innerText = questionNumber + 1 + ") " + question.question;
 
+  if (question.question_type === "multiple-choice") {
+    questionElement.innerText =
+      questionElement.innerText + " (Multiple choice)";
+  }
+
+  question.answers = question.answers.sort(() => Math.random() - 0.5);
+
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
 
@@ -2372,6 +2379,18 @@ const questionSet3 = [
       { text: "potato", correct: true },
       { text: "potato", correct: false },
       { text: "deer", correct: false },
+    ],
+  },
+  {
+    question_type: "multiple-choice",
+    number_of_correct_answers: 2,
+    question: "what",
+    answers: [
+      { text: "a", correct: true },
+      { text: "b", correct: true },
+      { text: "c", correct: false },
+      { text: "d", correct: false },
+      { text: "e", correct: false },
     ],
   },
 ];
