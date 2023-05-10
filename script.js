@@ -4675,7 +4675,6 @@ const questionSet6 = [
       { text: "Action", correct: false },
       { text: "Bundle", correct: false },
     ],
-    many,
   },
   {
     question_type: "single-choice",
