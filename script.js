@@ -2,6 +2,7 @@ const previewButton = document.getElementById("preview-button");
 const homeButton = document.getElementById("home-button");
 const goBackButton = document.getElementById("go-back-button");
 const startButton = document.getElementById("start-button");
+const previousButton = document.getElementById("previous-button");
 const nextButton = document.getElementById("next-button");
 const finishButton = document.getElementById("finish-button");
 const questionContainerElement = document.getElementById("question-container");
@@ -14,6 +15,7 @@ const containerElement = document.getElementById("container");
 const progressBar = document.getElementById("progress-bar-inner");
 const scoreboard = document.getElementById("scoreboard");
 const userScore = document.getElementById("score");
+const scrollUpButton = document.getElementById("scroll-up-button");
 
 //button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
@@ -21,6 +23,13 @@ let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
 previewButton.addEventListener("click", showPreview);
 
 startButton.addEventListener("click", startExam);
+
+scrollUpButton.addEventListener("click", topFunction);
+
+previousButton.addEventListener("click", () => {
+  currentQuestionIndex--;
+  setPreviousQuestion();
+});
 
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -33,21 +42,27 @@ homeButton.addEventListener("click", endMockExam);
 finishButton.addEventListener("click", showScoreboard);
 
 function showScoreboard() {
-  //start confetti
-  confetti.start();
+  var userScorePercentage = Math.round(
+    (score / pickedQuestionSet.length) * 100
+  );
 
-  setTimeout(function () {
-    confetti.stop();
-  }, 10000);
+  //start confetti
+  if (userScorePercentage > 65) {
+    confetti.start();
+
+    setTimeout(function () {
+      confetti.stop();
+    }, 10000);
+  }
 
   scoreboard.classList.remove("hide");
+  previousButton.classList.add("hide");
   finishButton.classList.add("hide");
   questionContainerElement.classList.add("hide");
   selectedSetButton.classList.remove("selected-answer");
   homeButton.classList.remove("hide");
 
-  userScore.innerText =
-    Math.round((score / pickedQuestionSet.length) * 100) + " %";
+  userScore.innerText = userScorePercentage + " %";
 }
 
 function endMockExam() {
@@ -120,6 +135,11 @@ function startExam() {
   setNextQuestion();
 }
 
+function setPreviousQuestion() {
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex], currentQuestionIndex);
+}
+
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex], currentQuestionIndex);
@@ -153,10 +173,24 @@ function showQuestion(question, questionNumber) {
 
     answerButtonsElement.appendChild(button);
   });
+
+  //Show previous and next/finish buttons on quiz.
+  if (currentQuestionIndex > 0) {
+    previousButton.classList.remove("hide");
+  } else {
+    previousButton.classList.add("hide");
+  }
+
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove("hide");
+  } else {
+    finishButton.classList.remove("hide");
+  }
 }
 
 function resetState() {
   nextButton.classList.add("hide");
+  finishButton.classList.add("hide");
 
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -215,14 +249,6 @@ function selectAnswer(e) {
       selectedAnswersCount = 0;
     }
   }
-
-  if (showNextButton) {
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-      nextButton.classList.remove("hide");
-    } else {
-      finishButton.classList.remove("hide");
-    }
-  }
 }
 
 function setStatusClass(element, correct) {
@@ -273,6 +299,23 @@ function showPreview() {
       }
     });
   });
+}
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    scrollUpButton.style.display = "block";
+  } else {
+    scrollUpButton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 //go back to question sets
@@ -770,23 +813,23 @@ const questionSet1 = [
   },
   {
     question_type: "single-choice",
-    question: `What is the output of below code snippet? 
-    var count = new GlideAggregate('incident'); 
-        count.addAggregate('MIN','sys_mod_count'); 
-        count.addAggregate('MAX','sys_mod_count'); 
-        count.addAggregate('AVG','sys_mod_count'); 
-        count.groupBy('category');
-        count.query();
-    
-    while(count.next()){
+    question: `What is the output of below code snippet?
+	  var count = new GlideAggregate('incident');
+	      count.addAggregate('MIN','sys_mod_count');
+	      count.addAggregate('MAX','sys_mod_count');
+	      count.addAggregate('AVG','sys_mod_count');
+	      count.groupBy('category');
+	      count.query();
 
-      var min= count.getAggregate('MIN','sys_mod_count'); 
-      var max = count.getAggregate('MAX','sys_mod_count'); 
-      var avg= count.getAggregate('AVG','sys_mod_count'); 
-      var category= count.category.getDisplayValue();
+	  while(count.next()){
 
-      gs.log(category + " Update counts: MIN="+ min+" MAX="+ max+" AVG="+ avg);
-    }`,
+	    var min= count.getAggregate('MIN','sys_mod_count');
+	    var max = count.getAggregate('MAX','sys_mod_count');
+	    var avg= count.getAggregate('AVG','sys_mod_count');
+	    var category= count.category.getDisplayValue();
+
+	    gs.log(category + " Update counts: MIN="+ min+" MAX="+ max+" AVG="+ avg);
+	  }`,
     answers: [
       {
         text: "Result is total number of times records have been modified using the MIN, MAX, and AVG values.",
@@ -1411,9 +1454,9 @@ const questionSet1 = [
   },
   {
     question_type: "single-choice",
-    question: `Here is the Business Rule script template: 
-    (function executeRule (current, previous */null when async*/){ }) (current, previous); 
-    This type of JavaScript function is known as:`,
+    question: `Here is the Business Rule script template:
+	  (function executeRule (current, previous */null when async*/){ }) (current, previous);
+	  This type of JavaScript function is known as:`,
     answers: [
       { text: "Scoped", correct: false },
       { text: "Anonymous", correct: false },
