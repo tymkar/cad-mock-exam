@@ -16,7 +16,6 @@ const progressBar = document.getElementById("progress-bar-inner");
 const scoreboard = document.getElementById("scoreboard");
 const userScore = document.getElementById("score");
 const scrollUpButton = document.getElementById("scroll-up-button");
-//test
 
 //button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
@@ -128,7 +127,14 @@ let progressBarWidth;
 function startExam() {
   previewButton.classList.add("hide");
   startButton.classList.add("hide");
+
+  // Random questions and answers
   shuffledQuestions = pickedQuestionSet.sort(() => Math.random() - 0.5);
+
+  for (var i = 0; i < shuffledQuestions.length; i++) {
+    shuffledQuestions[i].answers.sort(() => Math.random() - 0.5);
+  }
+
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
   questionSetContainer.classList.add("hide");
@@ -157,23 +163,62 @@ function showQuestion(question, questionNumber) {
       questionElement.innerText + " (Multiple choice)";
   }
 
-  question.answers = question.answers.sort(() => Math.random() - 0.5);
+  let checked = false;
+  let answerCount = 0;
+  let correctAnswersCount = 0;
 
-  question.answers.forEach((answer) => {
-    const button = document.createElement("button");
-
-    button.innerText = answer.text;
-
-    button.classList.add("button", "answer-button");
-
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
+  for (var i = 0; i < question.answers.length; i++) {
+    if (question.answers[i].selected) {
+      checked = true;
+      answerCount++;
     }
 
-    button.addEventListener("click", selectAnswer);
+    if (question.question_type != "single-choice") {
+      correctAnswersCount = question.number_of_correct_answers;
+    } else {
+      correctAnswersCount = 1;
+    }
+  }
 
-    answerButtonsElement.appendChild(button);
-  });
+  if (!checked || answerCount != correctAnswersCount) {
+    question.answers.forEach((answer) => {
+      const button = document.createElement("button");
+
+      button.innerText = answer.text;
+
+      button.classList.add("button", "answer-button");
+
+      if (answer.correct) {
+        button.dataset.correct = answer.correct;
+      }
+
+      button.addEventListener("click", selectAnswer);
+
+      answerButtonsElement.appendChild(button);
+    });
+  } else {
+    question.answers.forEach((answer) => {
+      const button = document.createElement("button");
+
+      button.innerText = answer.text;
+
+      button.classList.add("button", "answer-button");
+
+      if (answer.correct) {
+        button.classList.add("correct");
+      } else {
+        button.classList.add("wrong");
+      }
+
+      if (answer.selected) {
+        button.classList.add("selected-answer");
+      }
+
+      button.removeEventListener("click", selectAnswer);
+
+      answerButtonsElement.appendChild(button);
+    });
+  }
 
   //Show previous and next/finish buttons on quiz.
   if (currentQuestionIndex > 0) {
@@ -193,6 +238,9 @@ function resetState() {
   nextButton.classList.add("hide");
   finishButton.classList.add("hide");
 
+  multipleChoiceCorrectCount = 0;
+  selectedAnswersCount = 0;
+
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
@@ -204,9 +252,21 @@ let multipleChoiceCorrectCount = 0;
 function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
-  let showNextButton = false;
 
   selectedButton.classList.add("selected-answer");
+
+  for (
+    var i = 0;
+    i < shuffledQuestions[currentQuestionIndex].answers.length;
+    i++
+  ) {
+    if (
+      shuffledQuestions[currentQuestionIndex].answers[i].text ==
+      selectedButton.innerHTML
+    ) {
+      shuffledQuestions[currentQuestionIndex].answers[i].selected = true;
+    }
+  }
 
   if (
     shuffledQuestions[currentQuestionIndex].question_type === "single-choice"
@@ -215,8 +275,6 @@ function selectAnswer(e) {
       setStatusClass(button, button.dataset.correct);
       button.removeEventListener("click", selectAnswer);
     });
-
-    showNextButton = true;
 
     if (correct) {
       score++;
@@ -246,7 +304,6 @@ function selectAnswer(e) {
       }
       multipleChoiceCorrectCount = 0;
 
-      showNextButton = true;
       selectedAnswersCount = 0;
     }
   }
@@ -581,6 +638,7 @@ const questionSet1 = [
         correct: false,
       },
     ],
+    selectedAnswers: [],
   },
   {
     question_type: "single-choice",
