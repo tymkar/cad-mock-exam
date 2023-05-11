@@ -16,6 +16,7 @@ const progressBar = document.getElementById("progress-bar-inner");
 const scoreboard = document.getElementById("scoreboard");
 const userScore = document.getElementById("score");
 const scrollUpButton = document.getElementById("scroll-up-button");
+//test
 
 //button event listeners
 let shuffledQuestions, currentQuestionIndex, pickedQuestionSet;
