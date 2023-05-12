@@ -289,3 +289,7 @@ body {
   font-size: 25px;
   transform: rotate(-90deg);
 }
+
+.go-back-button {
+  background-color: darkred;
+}

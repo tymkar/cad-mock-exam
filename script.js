@@ -14,6 +14,7 @@ const questionSetPreview = document.getElementById("preview-container");
 const containerElement = document.getElementById("container");
 const progressBar = document.getElementById("progress-bar-inner");
 const scoreboard = document.getElementById("scoreboard");
+const scoreTitle = document.getElementById("score-title");
 const userScore = document.getElementById("score");
 const scrollUpButton = document.getElementById("scroll-up-button");
 
@@ -41,6 +42,11 @@ homeButton.addEventListener("click", endMockExam);
 
 finishButton.addEventListener("click", showScoreboard);
 
+function getColor(value) {
+  var hue = (value * 120).toString(10);
+  return ["hsl(", hue, ",100%,50%)"].join("");
+}
+
 function showScoreboard() {
   var userScorePercentage = Math.round(
     (score / pickedQuestionSet.length) * 100
@@ -55,11 +61,15 @@ function showScoreboard() {
     }, 10000);
   }
 
+  scoreTitle.style.color = getColor(userScorePercentage);
+  userScore.style.color = getColor(userScorePercentage);
+
   scoreboard.classList.remove("hide");
   previousButton.classList.add("hide");
   finishButton.classList.add("hide");
   questionContainerElement.classList.add("hide");
   selectedSetButton.classList.remove("selected-answer");
+  goBackButton.classList.add("hide");
   homeButton.classList.remove("hide");
 
   userScore.innerText = userScorePercentage + " %";
@@ -69,6 +79,7 @@ function endMockExam() {
   score = 0;
   questionContainerElement.classList.add("hide");
   questionSetContainer.classList.remove("hide");
+  goBackButton.classList.add("hide");
   scoreboard.classList.add("hide");
   homeButton.classList.add("hide");
 }
@@ -127,12 +138,17 @@ let progressBarWidth;
 function startExam() {
   previewButton.classList.add("hide");
   startButton.classList.add("hide");
+  goBackButton.classList.remove("hide");
 
   // Random questions and answers
   shuffledQuestions = pickedQuestionSet.sort(() => Math.random() - 0.5);
 
   for (var i = 0; i < shuffledQuestions.length; i++) {
     shuffledQuestions[i].answers.sort(() => Math.random() - 0.5);
+
+    shuffledQuestions[i].answers.map((answer) =>
+      answer.selected ? delete answer.selected : ""
+    );
   }
 
   currentQuestionIndex = 0;
@@ -378,6 +394,10 @@ function topFunction() {
 
 //go back to question sets
 function showQuestionSets() {
+  finishButton.classList.add("hide");
+  nextButton.classList.add("hide");
+  previousButton.classList.add("hide");
+  questionContainerElement.classList.add("hide");
   goBackButton.classList.add("hide");
   previewButton.classList.remove("hide");
   questionSetPreview.classList.add("hide");
@@ -595,6 +615,7 @@ var confetti = {
       context.stroke();
     }
   }
+
   function updateParticles() {
     var width = window.innerWidth;
     var height = window.innerHeight;
